@@ -27,7 +27,6 @@ header{
     margin-bottom:10px;
     transition:0.8s;
 }
-}
 
 header p{
     font-size:18px;
@@ -135,19 +134,7 @@ footer{
         0 0 35px #ffae00,
         0 0 50px #ffae00;
 }
-}
-}
 /* حرکت ستاره‌های شگفتا ✨ */
-
-@keyframes fall {
-
-    from{
-        transform:translateY(0) rotate(0deg);
-    }
-
-    to{
-        transform:translateY(110vh) rotate(360deg);
-    }
 
 }
 .owl{
