@@ -67,3 +67,20 @@ if(searchInput){
     });
 
 }
+const darkBtn = document.getElementById("darkModeBtn");
+
+if(darkBtn){
+
+    darkBtn.addEventListener("click",function(){
+
+        document.body.classList.toggle("dark");
+
+        if(document.body.classList.contains("dark")){
+            darkBtn.innerHTML="☀️ حالت روز";
+        }else{
+            darkBtn.innerHTML="🌙 حالت شب";
+        }
+
+    });
+
+}
