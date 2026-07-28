@@ -129,3 +129,28 @@ function speak(){
 avatar.addEventListener("click",speak);
 
 setInterval(speak,8000);
+function talk(text){
+
+    if("speechSynthesis" in window){
+
+        let speech = new SpeechSynthesisUtterance(text);
+
+        speech.lang = "fa-IR";
+
+        speech.rate = 0.9;
+
+        speech.pitch = 1;
+
+        speech.volume = 1;
+
+        speechSynthesis.speak(speech);
+
+    }
+
+}
+
+avatar.addEventListener("dblclick",function(){
+
+    talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
+
+});
