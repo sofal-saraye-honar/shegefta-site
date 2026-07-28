@@ -83,7 +83,7 @@ function talk(text){
     if("speechSynthesis" in window){
 
         const speech = new SpeechSynthesisUtterance(text);
-
+        
         speech.lang = "en-US";
         speech.rate = 0.9;
         speech.pitch = 1;
