@@ -104,3 +104,9 @@ footer{
     padding:20px;
     margin-top:40px;
 }
+.glow{
+    text-shadow: 0 0 10px gold,
+                 0 0 20px gold,
+                 0 0 35px orange;
+    transition: 0.8s;
+}
