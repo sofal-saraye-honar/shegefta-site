@@ -154,3 +154,26 @@ avatar.addEventListener("dblclick",function(){
     talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
 
 });
+const starsContainer = document.getElementById("stars-container");
+
+function createStar(){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.innerHTML="⭐";
+
+    star.style.left=Math.random()*100+"vw";
+
+    star.style.animationDuration=(3+Math.random()*4)+"s";
+
+    starsContainer.appendChild(star);
+
+    setTimeout(()=>{
+        star.remove();
+    },7000);
+
+}
+
+setInterval(createStar,700);
