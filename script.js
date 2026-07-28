@@ -46,3 +46,24 @@ function createStar(){
 
 
 setInterval(createStar,800);
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+    searchInput.addEventListener("keyup",function(){
+
+        let value = this.value.toLowerCase();
+
+        document.querySelectorAll(".card").forEach(function(card){
+
+            if(card.innerText.toLowerCase().includes(value)){
+                card.style.display="block";
+            }else{
+                card.style.display="none";
+            }
+
+        });
+
+    });
+
+}
