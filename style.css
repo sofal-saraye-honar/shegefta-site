@@ -131,3 +131,16 @@ footer{
                  0 0 35px orange;
     transition: 0.8s;
 }
+/* حرکت ستاره‌های شگفتا ✨ */
+
+@keyframes fall {
+
+    from{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+
+}
