@@ -100,8 +100,6 @@ if(avatar){
     });
 
 }
-const avatar=document.querySelector(".avatar");
-const bubble=document.querySelector(".bubble");
 
 const messages=[
 "سلام 🌸 من نقشین هستم.",
