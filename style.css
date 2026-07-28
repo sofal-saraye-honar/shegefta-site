@@ -194,3 +194,39 @@ footer{
     background:#115e59;
     transform:scale(1.05);
 }
+.latest{
+    padding:40px 20px;
+    background:#ffffff;
+}
+
+.latest h2{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:25px;
+}
+
+.post{
+    max-width:800px;
+    margin:20px auto;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.post h3{
+    color:#0f766e;
+    margin-bottom:10px;
+}
+
+.post a{
+    display:inline-block;
+    margin-top:10px;
+    color:#0ea5a4;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.post a:hover{
+    color:#115e59;
+}
