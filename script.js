@@ -100,3 +100,32 @@ if(avatar){
     });
 
 }
+const avatar=document.querySelector(".avatar");
+const bubble=document.querySelector(".bubble");
+
+const messages=[
+"سلام 🌸 من نقشین هستم.",
+"به شگفتا خوش اومدی.",
+"اگر دنبال دعا، آموزش یا دانستنی هستی کمکت می‌کنم.",
+"روی دسته‌ها کلیک کن و شروع کن ✨"
+];
+
+let i=0;
+
+function speak(){
+
+    bubble.classList.add("show");
+
+    bubble.innerHTML=messages[i];
+
+    i++;
+
+    if(i>=messages.length){
+        i=0;
+    }
+
+}
+
+avatar.addEventListener("click",speak);
+
+setInterval(speak,8000);
