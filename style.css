@@ -310,3 +310,44 @@ footer{
     box-shadow:0 4px 12px rgba(0,0,0,.15);
     display:none;
 }
+/* حرکت نقشین */
+
+@keyframes floatAvatar{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+.avatar{
+    animation:floatAvatar 2.5s infinite ease-in-out;
+}
+
+
+/* ظاهر شدن پیام */
+
+@keyframes showBubble{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.bubble.show{
+
+    display:block;
+    animation:showBubble .5s ease;
+
+}
