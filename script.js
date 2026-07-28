@@ -84,3 +84,19 @@ if(darkBtn){
     });
 
 }
+const avatar = document.querySelector(".avatar");
+const bubble = document.querySelector(".bubble");
+
+if(avatar){
+
+    avatar.addEventListener("click",function(){
+
+        if(bubble.style.display=="block"){
+            bubble.style.display="none";
+        }else{
+            bubble.style.display="block";
+        }
+
+    });
+
+}
