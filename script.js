@@ -84,7 +84,7 @@ function talk(text){
 
         const speech = new SpeechSynthesisUtterance(text);
 
-        speech.lang = "fa-IR";
+        speech.lang = "en-US";
         speech.rate = 0.9;
         speech.pitch = 1;
         speech.volume = 1;
@@ -100,8 +100,7 @@ if (avatar && bubble) {
 
     
     avatar.addEventListener("dblclick", function () {
-    talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
-});
+    talk("Welcome to Shegefta.");
 
     setInterval(speak, 8000);
 
@@ -129,3 +128,14 @@ function createStar(){
 }
 
 setInterval(createStar,700);
+const logo = document.getElementById("logo");
+
+if (logo) {
+
+    setInterval(function () {
+
+        logo.classList.toggle("glow");
+
+    }, 1000);
+
+}
