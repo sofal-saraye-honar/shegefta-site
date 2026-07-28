@@ -162,3 +162,35 @@ footer{
     }
 
 }
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(180deg,#e6fffb,#ffffff);
+}
+
+.hero h1{
+    font-size:52px;
+    color:#0f766e;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0ea5a4;
+    color:white;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#115e59;
+    transform:scale(1.05);
+}
