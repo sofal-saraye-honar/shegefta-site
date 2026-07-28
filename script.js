@@ -23,7 +23,7 @@ function createStar(){
 
     let star = document.createElement("div");
 
-    star.innerHTML = "✨";
+    star.innerHTML = "⭐️";
 
     star.style.position = "fixed";
     star.style.left = Math.random() * 100 + "%";
