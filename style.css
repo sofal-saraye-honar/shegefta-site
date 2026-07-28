@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -6,107 +7,121 @@
 
 body{
     direction:rtl;
-    font-family:Tahoma,sans-serif;
+    font-family:Tahoma, sans-serif;
     background:#f8fafc;
     color:#333;
     line-height:1.8;
 }
 
+
 header{
     background:linear-gradient(135deg,#0ea5a4,#14b8a6);
-    color:#fff;
+    color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:35px 15px;
 }
 
 .logo{
-    font-size:40px;
+    font-size:38px;
     font-weight:bold;
     margin-bottom:10px;
 }
 
-.subtitle{
+header p{
     font-size:18px;
 }
 
+
 nav{
-    margin-top:25px;
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:15px;
+    box-shadow:0 2px 8px #ddd;
 }
 
 nav a{
-    color:#fff;
     text-decoration:none;
-    margin:8px;
-    padding:8px 14px;
+    color:#0f766e;
+    padding:8px 15px;
     border-radius:20px;
     transition:.3s;
 }
 
 nav a:hover{
-    background:#ffffff33;
+    background:#0ea5a4;
+    color:white;
 }
 
-.hero{
+
+.welcome{
     text-align:center;
-    padding:60px 20px;
+    padding:35px 20px;
 }
 
-.hero h1{
+.welcome h1{
     color:#0f766e;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.hero p{
-    max-width:700px;
-    margin:auto;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#f59e0b;
-    color:#fff;
-    text-decoration:none;
-    padding:12px 24px;
-    border-radius:30px;
-}
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-    padding:30px;
-    max-width:1200px;
-    margin:auto;
+    padding:25px;
 }
 
+
 .card{
-    background:#fff;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    background:white;
+    text-align:center;
+    padding:25px 15px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 }
+
+
+.icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
 
 .card h2{
     color:#0f766e;
-    margin-bottom:12px;
+    margin-bottom:8px;
 }
 
+
 footer{
+    background:#134e4a;
+    color:white;
     text-align:center;
-    background:#0f766e;
-    color:#fff;
     padding:20px;
-    margin-top:40px;
+    margin-top:30px;
 }
-.glow{
-    text-shadow: 0 0 10px gold,
-                 0 0 20px gold,
-                 0 0 35px orange;
-    transition: 0.8s;
+
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:30px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .cards{
+        padding:15px;
+    }
+
 }
