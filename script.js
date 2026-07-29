@@ -160,3 +160,39 @@ if(hafez){
     });
 
 }
+const falBtn = document.getElementById("falBtn");
+const falResult = document.getElementById("falResult");
+
+const hafezFal = [
+
+"🌹 اگر غمگینی، امیدت را از دست نده؛ گشایش نزدیک است.",
+
+"🍀 راهی که آغاز کرده‌ای، پایان خوشی خواهد داشت.",
+
+"✨ صبر کن؛ اتفاق زیبایی در انتظار توست.",
+
+"💚 با مهربانی، درهای تازه‌ای به رویت باز می‌شود.",
+
+"🌸 نیتت پاک است؛ با توکل ادامه بده."
+
+];
+
+if(falBtn){
+
+    falBtn.addEventListener("click",function(){
+
+        let random=Math.floor(Math.random()*hafezFal.length);
+
+        document.querySelector(".book").style.transform="rotate(-15deg)";
+
+        setTimeout(function(){
+
+            document.querySelector(".book").style.transform="rotate(0deg)";
+
+            falResult.innerHTML=hafezFal[random];
+
+        },500);
+
+    });
+
+}
