@@ -438,3 +438,45 @@ footer{
 }
 
 }
+.hafez-book{
+    text-align:center;
+    padding:50px 20px;
+}
+
+#hafez{
+    width:180px;
+    animation:float 3s ease-in-out infinite;
+}
+
+.book{
+    font-size:90px;
+    margin:20px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.book:hover{
+    transform:rotate(-8deg) scale(1.1);
+}
+
+#falBtn{
+    background:#0ea5a4;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+#falResult{
+    margin-top:20px;
+    font-size:20px;
+    color:#0f766e;
+    min-height:70px;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
