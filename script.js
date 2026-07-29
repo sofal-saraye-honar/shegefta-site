@@ -100,7 +100,7 @@ avatar.addEventListener("click", speak);
 
 avatar.addEventListener("dblclick", function () {
     talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
-});
+
 
 setInterval(speak, 8000);
 
