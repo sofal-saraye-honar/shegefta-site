@@ -421,3 +421,55 @@ if(falBtn){
     });
 
 }
+.hafez-section{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hafez-img{
+    width:220px;
+    max-width:90%;
+    animation:hafezFloat 3s ease-in-out infinite;
+}
+
+@keyframes hafezFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+#falBtn{
+
+    margin-top:20px;
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:#0ea5a4;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#falBtn:hover{
+
+    background:#0f766e;
+    transform:scale(1.05);
+
+}
+
+#falResult{
+
+    margin-top:25px;
+    font-size:22px;
+    color:#0f766e;
+    min-height:70px;
+
+}
