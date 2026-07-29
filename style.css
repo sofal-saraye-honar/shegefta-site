@@ -320,6 +320,34 @@ footer{
 .avatar{
     animation:floatAvatar 2.5s infinite ease-in-out;
 }
+.hafez-box{
+    text-align:center;
+    margin:40px auto;
+}
+
+.hafez-avatar{
+    font-size:90px;
+    cursor:pointer;
+    animation:hafezMove 3s infinite;
+}
+
+.hafez-text{
+    margin-top:15px;
+    font-size:20px;
+    color:#0f766e;
+}
+
+@keyframes hafezMove{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
 
 
 /* ظاهر شدن پیام */
