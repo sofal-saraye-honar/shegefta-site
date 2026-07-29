@@ -196,3 +196,33 @@ if(falBtn){
     });
 
 }
+const falBtn = document.getElementById("falBtn");
+const falResult = document.getElementById("falResult");
+
+const falList = [
+
+"🌸 فال شما: روزهای زیبایی در پیش است.",
+
+"🍀 فال شما: خبر خوشی در راه است.",
+
+"🌹 فال شما: صبر کلید موفقیت توست.",
+
+"✨ فال شما: به نیتت خواهی رسید.",
+
+"💚 فال شما: امیدت را حفظ کن، گشایش نزدیک است.",
+
+"🌼 فال شما: لبخند بزن، اتفاق خوبی منتظر توست."
+
+];
+
+if(falBtn){
+
+    falBtn.addEventListener("click",function(){
+
+        const random=Math.floor(Math.random()*falList.length);
+
+        falResult.innerHTML=falList[random];
+
+    });
+
+}
