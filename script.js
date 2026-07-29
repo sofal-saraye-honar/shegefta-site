@@ -83,7 +83,7 @@ function talk(text){
     if("speechSynthesis" in window){
 
         const speech = new SpeechSynthesisUtterance(text);
-        
+
         speech.lang = "en-US";
         speech.rate = 0.9;
         speech.pitch = 1;
@@ -92,18 +92,6 @@ function talk(text){
         speechSynthesis.speak(speech);
 
     }
-
-}
-if (avatar && bubble) {
-
-    avatar.addEventListener("click", speak);
-
-    
-    avatar.addEventListener("dblclick", function () {
-    talk("Welcome to Shegefta.");
-
-    setInterval(speak, 8000);
-
 }
 const starsContainer = document.getElementById("stars-container");
 
