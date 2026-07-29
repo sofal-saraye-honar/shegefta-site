@@ -473,3 +473,41 @@ if(falBtn){
     min-height:70px;
 
 }
+.hafez-section{
+    max-width:700px;
+    margin:50px auto;
+    text-align:center;
+    background:#fffaf2;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+.hafez-img{
+    width:170px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+#falBtn{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#2e8b57;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#falBtn:hover{
+    transform:scale(1.05);
+}
+
+#falResult{
+    margin-top:20px;
+    line-height:2;
+    font-size:18px;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+}
