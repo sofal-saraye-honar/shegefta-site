@@ -136,3 +136,27 @@ logo.classList.toggle("glow");
 }, 1000);
 
 }
+const hafez=document.querySelector(".hafez-avatar");
+const hafezText=document.querySelector(".hafez-text");
+
+const fal=[
+
+"🌸 فال شما: روزهای خوبی در راه است.",
+"🍀 فال شما: به نیتت می‌رسی.",
+"🌹 فال شما: صبور باش، نتیجه نزدیک است.",
+"✨ فال شما: خبر خوشی خواهی شنید.",
+"💚 فال شما: امیدت را از دست نده."
+
+];
+
+if(hafez){
+
+    hafez.addEventListener("click",function(){
+
+        let random=Math.floor(Math.random()*fal.length);
+
+        hafezText.innerHTML=fal[random];
+
+    });
+
+}
