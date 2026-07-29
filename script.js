@@ -67,7 +67,6 @@ function speak(){
 if (!bubble) return;
 
 bubble.classList.add("show");
-
 bubble.innerHTML = messages[i];
 
 i++;  
@@ -84,7 +83,7 @@ if("speechSynthesis" in window){
 
     const speech = new SpeechSynthesisUtterance(text);  
 
-    speech.lang = "en-US";  
+    speech.lang = "fa-IR";  
     speech.rate = 0.9;  
     speech.pitch = 1;  
     speech.volume = 1;  
@@ -98,14 +97,15 @@ if (avatar && bubble) {
 
 avatar.addEventListener("click", speak);  
 
+  
 avatar.addEventListener("dblclick", function () {  
-    talk("Welcome to Shegefta.");  
-});  
+talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
+
+});
 
 setInterval(speak, 8000);
 
 }
-
 const starsContainer = document.getElementById("stars-container");
 
 function createStar(){
@@ -129,15 +129,3 @@ setTimeout(()=>{
 }
 
 setInterval(createStar,700);
-const logo = document.getElementById("logo");
-
-if (logo) {
-
-setInterval(function () {  
-
-    logo.classList.toggle("glow");  
-
-}, 1000);
-
-}
-خوبه
