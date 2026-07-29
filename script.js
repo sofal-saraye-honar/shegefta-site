@@ -226,3 +226,40 @@ if(falBtn){
     });
 
 }
+// =======================
+// فال حافظ شگفتا
+// =======================
+
+const falBtn = document.getElementById("falBtn");
+const falResult = document.getElementById("falResult");
+
+const falList = [
+
+{
+text:"🌹 فال اول<br><br>صلاح کار کجا و من خراب کجا...<br><br>تعبیر: صبر داشته باش، نتیجه خوبی در انتظار توست."
+},
+
+{
+text:"🍀 فال دوم<br><br>الا یا ایها الساقی...<br><br>تعبیر: خبر خوشی به زودی می‌رسد."
+},
+
+{
+text:"🌸 فال سوم<br><br>دوش دیدم که ملائک در میخانه زدند...<br><br>تعبیر: امیدت را از دست نده، راهت روشن می‌شود."
+},
+
+{
+text:"⭐ فال چهارم<br><br>اگر آن ترک شیرازی...<br><br>تعبیر: محبت و مهربانی گره کارت را باز می‌کند."
+}
+
+];
+
+if(falBtn){
+
+falBtn.addEventListener("click",function(){
+
+const random=Math.floor(Math.random()*falList.length);
+
+falResult.innerHTML=falList[random].text;
+
+});
+}
