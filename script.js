@@ -84,7 +84,7 @@ if("speechSynthesis" in window){
 
     const speech = new SpeechSynthesisUtterance(text);  
 
-    speech.lang = "fa-IR";  
+    speech.lang = "en-US";  
     speech.rate = 0.9;  
     speech.pitch = 1;  
     speech.volume = 1;  
@@ -96,16 +96,13 @@ if("speechSynthesis" in window){
 }
 if (avatar && bubble) {
 
-    avatar.addEventListener("click", speak);
+avatar.addEventListener("click", speak);  
 
-    avatar.addEventListener("dblclick", function () {
-        talk("سلام دوست من. به شگفتا خوش اومدی. امیدوارم امروز چیزهای جالبی یاد بگیری.");
-    });
+avatar.addEventListener("dblclick", function () {  
+    talk("Welcome to Shegefta.");  
+});  
 
-    setInterval(speak, 8000);
-
-}
-}
+setInterval(speak, 8000);
 
 }
 
@@ -143,3 +140,4 @@ setInterval(function () {
 }, 1000);
 
 }
+خوبه
