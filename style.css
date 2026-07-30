@@ -377,3 +377,12 @@ nav{
 }
 
 }
+.book-cover.open{
+
+    transform:rotateY(160deg);
+
+    transition:1s;
+
+    box-shadow:35px 15px 40px rgba(0,0,0,.4);
+
+}
