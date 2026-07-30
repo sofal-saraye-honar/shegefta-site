@@ -54,17 +54,20 @@ overflow-x: hidden;
 /* ===== هدر ===== */
 
 header{
-    background:linear-gradient(135deg,#4caf50,#2e7d32);
-    color:white;
+    background: linear-gradient(135deg,#4caf50,#2e7d32,#1b5e20);
+    color:#fff;
     text-align:center;
-    padding:30px 20px;
+    padding:50px 20px;
+    position:relative;
+    overflow:hidden;
 }
 
 .logo{
-    font-size:42px;
+    font-size:48px;
     font-weight:bold;
-    margin:10px 0;
-    transition:.4s;
+    color:#fff;
+    letter-spacing:2px;
+    transition:0.5s;
 }
 
 .glow{
@@ -75,7 +78,8 @@ header{
 }
 
 .owl{
-    font-size:50px;
+    font-size:65px;
+    animation: owlMove 3s infinite ease-in-out;
 }
 
 /* ===== منو ===== */
@@ -300,6 +304,21 @@ nav{
 
 .avatar{
     font-size:50px;
+}
+
+}
+@keyframes owlMove{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-10px);
+}
+
+100%{
+    transform:translateY(0);
 }
 
 }
