@@ -173,6 +173,8 @@ if (falBtn && falResult) {
 
     falBtn.onclick = function () {
 
+        falBtn.classList.toggle("open");
+
         const random = Math.floor(Math.random() * fals.length);
 
         falResult.innerHTML = fals[random];
