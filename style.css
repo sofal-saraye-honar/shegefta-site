@@ -218,30 +218,75 @@ nav a:hover{
 /* ===== فال حافظ ===== */
 
 .hafez-section{
+/* ===== فال حافظ ===== */
+
+.hafez-section{
     text-align:center;
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
-.hafez-img{
-    width:180px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
+.book-cover{
 
-#falBtn{
-    padding:12px 30px;
-    border:none;
-    border-radius:30px;
-    background:#8e24aa;
+    width:240px;
+    height:320px;
+
+    margin:auto;
+
+    border-radius:12px;
+
+    background:linear-gradient(145deg,#7b1f1f,#b22222);
+
     color:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     cursor:pointer;
-    margin:15px 0;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.book-cover:hover{
+
+    transform:rotate(-3deg) scale(1.05);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.45);
+
+}
+
+.book-title{
+
+    font-size:34px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+.book-sub{
+
+    font-size:18px;
+
+    width:80%;
+
+    line-height:1.8;
+
 }
 
 #falResult{
-    margin-top:20px;
-    font-size:18px;
+
+    margin-top:30px;
+
+    font-size:20px;
+
     color:#2e7d32;
+
+    min-height:70px;
+
 }
 
 /* ===== نقشین ===== */
