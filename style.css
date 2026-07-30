@@ -1,3 +1,4 @@
+/* ===== تنظیمات کلی ===== */
 
 *{
     margin:0;
@@ -6,82 +7,171 @@
 }
 
 body{
-    direction:rtl;
-    font-family:Tahoma, sans-serif;
-    background:#f8fafc;
+    font-family:Tahoma,sans-serif;
+    background:#f8f8f8;
     color:#333;
+    direction:rtl;
     line-height:1.8;
 }
 
+/* ===== ستاره‌ها ===== */
+
+#stars-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    top:-30px;
+    font-size:18px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+
+}
+
+/* ===== هدر ===== */
 
 header{
-    background:linear-gradient(135deg,#0ea5a4,#14b8a6);
+    background:linear-gradient(135deg,#4caf50,#2e7d32);
     color:white;
     text-align:center;
-    padding:35px 15px;
+    padding:30px 20px;
 }
 
 .logo{
-    font-size:48px;
+    font-size:42px;
     font-weight:bold;
-    margin-bottom:10px;
-    transition:0.8s;
+    margin:10px 0;
+    transition:.4s;
 }
 
-header p{
-    font-size:18px;
+.glow{
+    text-shadow:
+    0 0 10px gold,
+    0 0 20px gold,
+    0 0 30px orange;
 }
 
+.owl{
+    font-size:50px;
+}
+
+/* ===== منو ===== */
 
 nav{
     background:#ffffff;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:10px;
+    gap:15px;
     padding:15px;
-    box-shadow:0 2px 8px #ddd;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 nav a{
+    color:#2e7d32;
     text-decoration:none;
-    color:#0f766e;
-    padding:8px 15px;
-    border-radius:20px;
-    transition:.3s;
+    font-weight:bold;
 }
 
 nav a:hover{
-    background:#0ea5a4;
-    color:white;
+    color:#ff9800;
 }
 
+/* ===== دکمه حالت شب ===== */
 
-.welcome{
+#darkModeBtn{
+    display:block;
+    margin:20px auto;
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#2e7d32;
+    color:#fff;
+    font-size:16px;
+}
+
+/* ===== Hero ===== */
+
+.hero{
     text-align:center;
-    padding:35px 20px;
+    padding:60px 20px;
 }
 
-.welcome h1{
-    color:#0f766e;
+.hero h1{
+    font-size:45px;
     margin-bottom:15px;
 }
 
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#fb8c00;
+}
+
+/* ===== جستجو ===== */
+
+.search-box{
+    text-align:center;
+    margin:30px;
+}
+
+.search-box input{
+    width:90%;
+    max-width:500px;
+    padding:12px;
+    border-radius:30px;
+    border:1px solid #ccc;
+}
+
+/* ===== کارت‌ها ===== */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-    padding:25px;
+    padding:30px;
 }
 
-
 .card{
-    background:white;
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
     text-align:center;
-    padding:25px 15px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
 }
 
@@ -89,425 +179,124 @@ nav a:hover{
     transform:translateY(-8px);
 }
 
-
 .icon{
-    font-size:45px;
+    font-size:40px;
     margin-bottom:10px;
 }
 
+/* ===== مطالب ===== */
 
-.card h2{
-    color:#0f766e;
-    margin-bottom:8px;
-}
-
-
-footer{
-    background:#134e4a;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
-}
-
-
-@media(max-width:600px){
-
-    .logo{
-        font-size:30px;
-    }
-
-    nav a{
-        font-size:14px;
-    }
-
-    .cards{
-        padding:15px;
-    }
-
-}
-.glow{
-    color:#fff8b0;
-    text-shadow:
-        0 0 10px #ffd700,
-        0 0 20px #ffd700,
-        0 0 35px #ffae00,
-        0 0 50px #ffae00;
-}
-/* حرکت ستاره‌های شگفتا ✨ */
-
-}
-.owl{
-    font-size:80px;
-    animation:owlMove 3s infinite ease-in-out;
-    margin-bottom:10px;
-}
-
-
-@keyframes owlMove{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-}
-.hero{
-    text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(180deg,#e6fffb,#ffffff);
-}
-
-.hero h1{
-    font-size:52px;
-    color:#0f766e;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:20px;
-    color:#444;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    background:#0ea5a4;
-    color:white;
-    padding:12px 28px;
-    border-radius:30px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#115e59;
-    transform:scale(1.05);
-}
 .latest{
-    padding:40px 20px;
-    background:#ffffff;
-}
-
-.latest h2{
-    text-align:center;
-    color:#0f766e;
-    margin-bottom:25px;
+    padding:30px;
 }
 
 .post{
-    max-width:800px;
-    margin:20px auto;
+    background:#fff;
+    margin:20px 0;
     padding:20px;
-    background:#f8fafc;
     border-radius:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.post h3{
-    color:#0f766e;
-    margin-bottom:10px;
-}
+/* ===== فال حافظ ===== */
 
-.post a{
-    display:inline-block;
-    margin-top:10px;
-    color:#0ea5a4;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.post a:hover{
-    color:#115e59;
-}
-.search-box{
+.hafez-section{
     text-align:center;
-    padding:25px;
+    padding:40px 20px;
 }
 
-.search-box input{
-    width:90%;
-    max-width:600px;
-    padding:15px;
-    font-size:18px;
-    border:2px solid #0ea5a4;
-    border-radius:35px;
-    outline:none;
+.hafez-img{
+    width:180px;
+    border-radius:15px;
+    margin-bottom:20px;
 }
 
-.search-box input:focus{
-    box-shadow:0 0 10px rgba(14,165,164,.35);
-}
-#darkModeBtn{
-    background:#0ea5a4;
-    color:white;
+#falBtn{
+    padding:12px 30px;
     border:none;
-    padding:10px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:15px;
-}
-
-.dark{
-    background:#121212;
-    color:#f1f1f1;
-}
-
-.dark nav{
-    background:#1f1f1f;
-}
-
-.dark .card,
-.dark .post{
-    background:#222;
+    border-radius:30px;
+    background:#8e24aa;
     color:#fff;
+    cursor:pointer;
+    margin:15px 0;
 }
 
-.dark header{
-    background:linear-gradient(135deg,#222,#333);
+#falResult{
+    margin-top:20px;
+    font-size:18px;
+    color:#2e7d32;
 }
 
-.dark footer{
-    background:#000;
-}
+/* ===== نقشین ===== */
+
 #naghsheen{
     position:fixed;
-    bottom:20px;
     left:20px;
+    bottom:20px;
     z-index:999;
 }
 
 .avatar{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#0ea5a4;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:38px;
+    font-size:60px;
     cursor:pointer;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
 }
 
 .bubble{
-    width:220px;
-    background:white;
+    display:none;
+    background:#fff;
     padding:12px;
     border-radius:15px;
     margin-bottom:10px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    display:none;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    width:220px;
 }
-/* حرکت نقشین */
 
-@keyframes floatAvatar{
+.show{
+    display:block;
+}
 
-    0%,100%{
-        transform:translateY(0);
-    }
+/* ===== فوتر ===== */
 
-    50%{
-        transform:translateY(-12px);
-    }
+footer{
+    background:#2e7d32;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
+/* ===== حالت شب ===== */
+
+.dark{
+    background:#222;
+    color:#fff;
+}
+
+.dark .card,
+.dark .post,
+.dark .bubble{
+    background:#333;
+    color:#fff;
+}
+
+/* ===== موبایل ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.logo{
+    font-size:32px;
+}
+
+nav{
+    gap:10px;
 }
 
 .avatar{
-    animation:floatAvatar 2.5s infinite ease-in-out;
-}
-.hafez-box{
-    text-align:center;
-    margin:40px auto;
+    font-size:50px;
 }
 
-.hafez-avatar{
-    font-size:90px;
-    cursor:pointer;
-    animation:hafezMove 3s infinite;
-}
-
-.hafez-text{
-    margin-top:15px;
-    font-size:20px;
-    color:#0f766e;
-}
-
-@keyframes hafezMove{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-}
-
-
-.hafez-book{
-    text-align:center;
-    padding:50px 20px;
-}
-
-#hafez{
-    width:180px;
-    animation:float 3s ease-in-out infinite;
-}
-
-.book{
-    font-size:90px;
-    margin:20px;
-    cursor:pointer;
-    transition:.4s;
-}
-
-.book:hover{
-    transform:rotate(-8deg) scale(1.1);
-}
-
-#falBtn{
-    background:#0ea5a4;
-    color:white;
-    border:none;
-    padding:14px 30px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:18px;
-}
-
-#falResult{
-    margin-top:20px;
-    font-size:20px;
-    color:#0f766e;
-    min-height:70px;
-}
-
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-}
-"🍀 راهی که آغاز کرده‌ای، پایان خوشی خواهد داشت.",
-
-"✨ صبر کن؛ اتفاق زیبایی در انتظار توست.",
-
-"💚 با مهربانی، درهای تازه‌ای به رویت باز می‌شود.",
-
-"🌸 نیتت پاک است؛ با توکل ادامه بده."
-
-];
-
-if(falBtn){
-
-    falBtn.addEventListener("click",function(){
-
-        let random=Math.floor(Math.random()*hafezFal.length);
-
-        document.querySelector(".book").style.transform="rotate(-15deg)";
-
-        setTimeout(function(){
-
-            document.querySelector(".book").style.transform="rotate(0deg)";
-
-            falResult.innerHTML=hafezFal[random];
-
-        },500);
-
-    });
-
-}
-.hafez-section{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hafez-img{
-    width:220px;
-    max-width:90%;
-    animation:hafezFloat 3s ease-in-out infinite;
-}
-
-@keyframes hafezFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-12px);
-    }
-
-}
-
-#falBtn{
-
-    margin-top:20px;
-    padding:14px 35px;
-    border:none;
-    border-radius:30px;
-    background:#0ea5a4;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-
-}
-
-#falBtn:hover{
-
-    background:#0f766e;
-    transform:scale(1.05);
-
-}
-
-#falResult{
-
-    margin-top:25px;
-    font-size:22px;
-    color:#0f766e;
-    min-height:70px;
-
-}
-.hafez-section{
-    max-width:700px;
-    margin:50px auto;
-    text-align:center;
-    background:#fffaf2;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 0 20px rgba(0,0,0,.15);
-}
-
-.hafez-img{
-    width:170px;
-    border-radius:50%;
-    margin-bottom:15px;
-}
-
-#falBtn{
-    padding:12px 25px;
-    border:none;
-    border-radius:10px;
-    background:#2e8b57;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
-#falBtn:hover{
-    transform:scale(1.05);
-}
-
-#falResult{
-    margin-top:20px;
-    line-height:2;
-    font-size:18px;
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
 }
