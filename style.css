@@ -12,6 +12,9 @@ body{
     color:#333;
     direction:rtl;
     line-height:1.8;
+    
+position: relative;
+overflow-x: hidden;    
 }
 
 /* ===== ستاره‌ها ===== */
