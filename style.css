@@ -146,11 +146,13 @@ nav a:hover{
     font-weight:bold;
     transition:.3s;
     box-shadow:0 6px 18px rgba(255,152,0,.4);
+    box-shadow:0 8px 20px rgba(255,152,0,.35);
 }
 
 .btn:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 10px 25px rgba(255,152,0,.6);
+    background:#fb8c00;
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(255,152,0,.5);
 }
 
 /* ===== جستجو ===== */
