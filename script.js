@@ -1,10 +1,15 @@
-// ===== خوش‌آمدگویی =====
+// ===============================
+// شگفتا | script.js
+// ===============================
 
+// خوش آمدگویی
 window.onload = function () {
     console.log("به شگفتا خوش آمدید ✨");
 };
 
-// ===== جستجو =====
+// ------------------------------
+// جستجو
+// ------------------------------
 
 const searchInput = document.getElementById("searchInput");
 
@@ -28,13 +33,15 @@ if (searchInput) {
 
 }
 
-// ===== حالت شب =====
+// ------------------------------
+// حالت شب
+// ------------------------------
 
 const darkBtn = document.getElementById("darkModeBtn");
 
 if (darkBtn) {
 
-    darkBtn.addEventListener("click", function () {
+    darkBtn.onclick = function () {
 
         document.body.classList.toggle("dark");
 
@@ -44,74 +51,58 @@ if (darkBtn) {
             darkBtn.innerHTML = "🌙 حالت شب";
         }
 
-    });
+    };
 
 }
 
-// ===== نقشین =====
+// ------------------------------
+// نقشین
+// ------------------------------
 
 const avatar = document.querySelector(".avatar");
 const bubble = document.querySelector(".bubble");
 
 const messages = [
+
     "سلام 🌸 من نقشین هستم.",
+
     "به شگفتا خوش اومدی.",
-    "اگر دنبال دعا، آموزش یا دانستنی هستی کمکت می‌کنم.",
-    "روی بخش‌های مختلف سایت کلیک کن و لذت ببر ✨"
+
+    "اینجا هر روز چیزهای جدید یاد می‌گیری.",
+
+    "برات آرزوی حال خوب دارم 🌿"
+
 ];
 
-let i = 0;
+let msg = 0;
 
 function speak() {
 
     if (!bubble) return;
 
     bubble.classList.add("show");
-    bubble.innerHTML = messages[i];
 
-    i++;
+    bubble.innerHTML = messages[msg];
 
-    if (i >= messages.length) {
-        i = 0;
+    msg++;
+
+    if (msg >= messages.length) {
+        msg = 0;
     }
 
 }
 
 if (avatar) {
 
-    avatar.addEventListener("click", speak);
+    avatar.onclick = speak;
 
     setInterval(speak, 8000);
 
 }
 
-// ===== ستاره‌های متحرک =====
-
-const starsContainer = document.getElementById("stars-container");
-
-function createStar() {
-
-    if (!starsContainer) return;
-
-    const star = document.createElement("div");
-
-    star.className = "star";
-    star.innerHTML = "⭐";
-
-    star.style.left = Math.random() * 100 + "vw";
-    star.style.animationDuration = (3 + Math.random() * 4) + "s";
-
-    starsContainer.appendChild(star);
-
-    setTimeout(function () {
-        star.remove();
-    }, 7000);
-
-}
-
-setInterval(createStar, 700);
-
-// ===== لوگوی درخشان =====
+// ------------------------------
+// لوگوی درخشان
+// ------------------------------
 
 const logo = document.getElementById("logo");
 
@@ -122,5 +113,70 @@ if (logo) {
         logo.classList.toggle("glow");
 
     }, 1000);
+
+}
+
+// ------------------------------
+// ستاره‌ها
+// ------------------------------
+
+const starsContainer = document.getElementById("stars-container");
+
+function createStar() {
+
+    if (!starsContainer) return;
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.innerHTML = "⭐";
+
+    star.style.left = Math.random() * 100 + "vw";
+
+    star.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    starsContainer.appendChild(star);
+
+    setTimeout(function () {
+
+        star.remove();
+
+    }, 7000);
+
+}
+
+setInterval(createStar, 700);
+
+// ------------------------------
+// فال حافظ
+// ------------------------------
+
+const falBtn = document.getElementById("falBtn");
+const falResult = document.getElementById("falResult");
+
+const fals = [
+
+"🌹 صبر داشته باش، گشایش نزدیک است.",
+
+"🍀 روزهای خوبی در راه است.",
+
+"✨ امیدت را از دست نده؛ خدا با توست.",
+
+"🌸 نیتت خیر است و نتیجه‌اش مبارک خواهد بود.",
+
+"🕊️ آرامش در انتظار توست."
+
+];
+
+if (falBtn && falResult) {
+
+    falBtn.onclick = function () {
+
+        const random = Math.floor(Math.random() * fals.length);
+
+        falResult.innerHTML = fals[random];
+
+    };
 
 }
