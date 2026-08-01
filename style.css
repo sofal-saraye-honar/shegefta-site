@@ -386,3 +386,16 @@ nav{
     box-shadow:35px 15px 40px rgba(0,0,0,.4);
 
 }
+.welcome-title{
+    margin-top:15px;
+    font-size:28px;
+    color:#fff;
+}
+
+.hafez-section{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:260px;
+    z-index:998;
+}
