@@ -200,6 +200,9 @@ nav a:hover{
 .card p{
     color:#666;
 }
+.cards > .card{
+    display:inline-block;
+}
 
 /* ===== مطالب ===== */
 
