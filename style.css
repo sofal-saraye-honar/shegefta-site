@@ -424,3 +424,15 @@ object-fit:cover;
 border-radius:50%;
 margin-bottom:15px;
 }
+.cards{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    gap:25px;
+}
+
+.card{
+    width:220px;
+}
