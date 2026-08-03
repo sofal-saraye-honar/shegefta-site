@@ -182,3 +182,21 @@ if (falBtn && falResult) {
     };
 
 }
+
+const dateElement = document.getElementById("date");
+
+if (dateElement) {
+
+    const today = new Date();
+
+    const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long"
+    };
+
+    dateElement.innerHTML =
+    today.toLocaleDateString("fa-IR", options);
+
+}
