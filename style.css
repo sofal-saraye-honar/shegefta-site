@@ -531,14 +531,15 @@ nav a:hover{
 }
     
 .back-btn{
-    display:block;
-    width:fit-content;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:220px;
     margin:40px auto;
-    padding:12px 25px;
+    padding:12px 20px;
     background:#00897b;
     color:#fff;
     text-decoration:none;
     border-radius:20px;
     font-size:18px;
-    text-align:center;
 }
