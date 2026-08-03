@@ -104,8 +104,11 @@ placeholder="🔍 جستجو در شگفتا">
 <h2>📿 ذکر امروز</h2>
 
 <p id="today-zekr"></p>
-
 </div>
+ 
+ <a href="zekr.html" class="back-btn zekr-btn">
+📿 مشاهده همه ذکرهای هفته
+ </a>
  
 <!-- خوش آمد -->
 
@@ -306,7 +309,7 @@ const zekrDays = [
 // تبدیل شماره روز جاوااسکریپت به روز ایرانی
 let day = new Date().getDay();
 
-let index = [1,2,3,4,5,6,0][day];
+let index = [6,0,1,2,3,4,5][day];
 
 
 document.getElementById("today-zekr").innerHTML =
