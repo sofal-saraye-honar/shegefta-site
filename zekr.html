@@ -2,19 +2,13 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ذکرهای هفته | شگفتا</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -30,7 +24,79 @@
 <h2 class="welcome-title">
 📿 ذکرهای هفته
 </h2>
+
 </header>
+
+<section class="cards">
+
+<div class="card" id="sat">   
+<h3>شنبه 📿</h3>
+<p>
+یارب العالمین ۱۰۰ مرتبه
+<br><br>
+بعد از نماز صبح: یا غنی ۱۰۶۰ مرتبه
+</p>
+</div>
+
+<div class="card" id="sun">
+<h3>یکشنبه 📿</h3>
+<p>
+یا ذوالجلال والاکرام ۱۰۰ مرتبه
+<br><br>
+بعد از نماز صبح: یا فتاح ۴۸۹ مرتبه
+</p>
+</div>
+
+<div class="card" id="mon">
+<h3>دوشنبه 📿</h3>
+<p>
+یا قاضی الحاجات ۱۰۰ مرتبه
+<br><br>
+یا لطیف ۱۲۹ مرتبه
+</p>
+</div>
+
+<div class="card" id="tue">
+<h3>سه‌شنبه 📿</h3>
+<p>
+یا ارحم الراحمین ۱۰۰ مرتبه
+<br><br>
+یا قابض ۹۰۳ مرتبه
+</p>
+</div>
+
+<div class="card" id="wed">
+<h3>چهارشنبه 📿</h3>
+<p>
+یا حی یا قیوم ۱۰۰ مرتبه
+<br><br>
+یا متعال ۵۴۱ مرتبه
+</p>
+</div>
+
+<div class="card" id="thu">
+<h3>پنجشنبه 📿</h3>
+<p>
+لا اله الا الله الملک الحق المبین
+<br><br>
+یا رزاق ۳۰۸ مرتبه
+</p>
+</div>
+
+<div class="card" id="fri">
+<h3>جمعه 📿</h3>
+<p>
+اللهم صل علی محمد و آل محمد و عجل فرجهم
+<br><br>
+یا نور ۲۵۶ مرتبه
+</p>
+</div>
+
+</section>
+
+<h2 style="text-align:center;margin:40px 0 20px;">
+🌙 دعاهای هفته
+</h2>
 
 <section class="cards">
 
@@ -127,7 +193,25 @@ weekday: 'long'
 document.getElementById("today-date").innerHTML =
 today.toLocaleDateString('fa-IR', options);
 </script>    
-    
+<script>
+
+const days = [
+"sun",
+"mon",
+"tue",
+"wed",
+"thu",
+"fri",
+"sat"
+];
+
+const todayCard = document.getElementById(days[new Date().getDay()]);
+
+if(todayCard){
+todayCard.classList.add("today-card");
+}
+
+</script>    
 </body>
 
 </html>
