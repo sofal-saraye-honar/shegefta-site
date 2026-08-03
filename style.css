@@ -49,8 +49,7 @@ overflow-x: hidden;
         opacity:0;
     }
 
-}
-
+    
 /* ===== هدر ===== */
 
 header{
@@ -294,7 +293,7 @@ nav a:hover{
 
 /* ===== نقشین ===== */
 
-##naghsheen{
+#naghsheen{
     position:fixed;
     top:20px;
     right:20px;
@@ -544,3 +543,16 @@ nav a:hover{
     border-radius:20px;
     font-size:18px;
 }
+
+.date-box{
+text-align:center;
+margin:20px auto;
+font-size:18px;
+color:#6d4c41;
+background:#fdf7ef;
+padding:10px 20px;
+border-radius:20px;
+width:fit-content;
+box-shadow:0 5px 15px #0001;
+}
+    
