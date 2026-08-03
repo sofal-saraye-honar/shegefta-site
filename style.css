@@ -531,7 +531,8 @@ nav a:hover{
 }
     
 .back-btn{
-    display:inline-block;
+    display:block;
+    width:max-content;
     margin:30px auto;
     padding:12px 25px;
     background:#00897b;
@@ -539,12 +540,4 @@ nav a:hover{
     border-radius:20px;
     text-decoration:none;
     font-size:18px;
-}
-
-.back-btn:hover{
-    opacity:.8;
-}
-
-.back-btn{
-    text-align:center;
 }
