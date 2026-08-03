@@ -306,7 +306,7 @@ const zekrDays = [
 // تبدیل شماره روز جاوااسکریپت به روز ایرانی
 let day = new Date().getDay();
 
-let index = day === 6 ? 6 : day + 1;
+let index = [1,2,3,4,5,6,0][day];
 
 
 document.getElementById("today-zekr").innerHTML =
