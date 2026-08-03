@@ -511,3 +511,14 @@ transition:.5s;
     color:#8d6e63;
     margin-bottom:20px;
 }
+
+.zekr-btn{
+display:block;
+width:fit-content;
+margin:20px auto 40px;
+background:#8d6e63;
+}
+
+.zekr-btn:hover{
+background:#26a69a;
+}
