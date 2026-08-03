@@ -529,3 +529,17 @@ nav a:hover{
 }
 
 }
+.back-btn{
+    display:inline-block;
+    margin:30px auto;
+    padding:12px 25px;
+    background:#00897b;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.back-btn:hover{
+    opacity:.8;
+}
