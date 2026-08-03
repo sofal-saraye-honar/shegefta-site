@@ -494,3 +494,20 @@ transform:scale(1.05);
 transition:.5s;
 
 }
+
+.zekr-box{
+    text-align:center;
+    margin:40px auto;
+    padding:25px;
+    width:90%;
+    max-width:600px;
+    background:#fff8dc;
+    border-radius:25px;
+    box-shadow:0 5px 20px #ddd;
+    font-size:18px;
+}
+
+.zekr-box h2{
+    color:#8d6e63;
+    margin-bottom:20px;
+}
