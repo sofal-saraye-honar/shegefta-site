@@ -48,7 +48,7 @@ overflow-x: hidden;
         transform:translateY(110vh);
         opacity:0;
     }
-
+}
     
 /* ===== هدر ===== */
 
@@ -171,19 +171,14 @@ nav a:hover{
 
 /* ===== کارت‌ها ===== */
 
-.card{
-    background:#fff;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:0.4s;
-    cursor:pointer;
+.cards a.card{
+text-decoration:none;
+color:inherit;
+display:block;
 }
 
-.card:hover{
-    transform:translateY(-10px) scale(1.05);
-    box-shadow:0 15px 30px rgba(0,0,0,.18);
+.cards a.card:hover{
+transform:translateY(-10px) scale(1.05);
 }
 
 .icon{
@@ -198,9 +193,6 @@ nav a:hover{
 
 .card p{
     color:#666;
-}
-.cards > .card{
-    display:inline-block;
 }
 
 /* ===== مطالب ===== */
@@ -217,9 +209,6 @@ nav a:hover{
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-/* ===== فال حافظ ===== */
-
-.hafez-section{
 /* ===== فال حافظ ===== */
 
 .hafez-section{
@@ -298,11 +287,6 @@ nav a:hover{
     top:20px;
     right:20px;
     z-index:9999;
-}
-
-.avatar{
-    font-size:60px;
-    cursor:pointer;
 }
 
 .bubble{
@@ -394,20 +378,14 @@ nav{
     color:#fff;
 }
 
-.hafez-section{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:260px;
-    z-index:998;
-}
 .cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    gap:25px;
 }
-
 
 .card{
 width:220px;
@@ -425,25 +403,6 @@ height:150px;
 object-fit:cover;
 border-radius:50%;
 margin-bottom:15px;
-}
-.cards{
-    display:flex !important;
-    flex-direction:row !important;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:flex-start;
-    gap:25px;
-}
-
-.card{
-    width:220px;
-}
-nav{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    padding:20px;
 }
 
 
@@ -468,40 +427,6 @@ nav a:hover{
     display:inline-block;
     animation: hello 1.5s infinite;
     transform-origin: bottom center;
-}
-
-
-@keyframes hello{
-
-0%{
-    transform:rotate(0deg);
-}
-
-20%{
-    transform:rotate(20deg);
-}
-
-40%{
-    transform:rotate(-20deg);
-}
-
-60%{
-    transform:rotate(15deg);
-}
-
-80%{
-    transform:rotate(-10deg);
-}
-
-100%{
-    transform:rotate(0deg);
-}
-
-}
-.avatar{
-    display:inline-block;
-    animation:hello 1.5s infinite;
-    transform-origin:bottom center;
 }
 
 
