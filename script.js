@@ -59,7 +59,7 @@ if (darkBtn) {
 // نقشین
 // ------------------------------
 
-const avatar = document.querySelector(".avatar");
+const avatar = document.querySelector(".avatar-gif");
 const bubble = document.querySelector(".bubble");
 
 const messages = [
