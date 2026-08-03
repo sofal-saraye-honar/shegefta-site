@@ -544,3 +544,7 @@ nav a:hover{
 .back-btn:hover{
     opacity:.8;
 }
+
+.back-btn{
+    text-align:center;
+}
