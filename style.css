@@ -574,3 +574,8 @@ color:#6d4c41;
     margin-top:20px;
     line-height:2;
 }
+
+.hafez-box h2,
+.hafez-box p{
+    text-align:center;
+}
