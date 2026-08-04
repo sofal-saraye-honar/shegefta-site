@@ -619,3 +619,37 @@ color:#6d4c41;
     margin-top:25px;
     line-height:2;
 }
+
+.featured{
+padding:30px 15px;
+}
+
+.featured h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.featured-slider{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
+scroll-behavior:smooth;
+}
+
+.featured-card{
+min-width:220px;
+background:#ffffff;
+border-radius:15px;
+padding:20px;
+text-decoration:none;
+text-align:center;
+font-size:18px;
+color:#444;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.featured-card:hover{
+transform:translateY(-5px);
+}
