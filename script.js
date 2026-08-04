@@ -201,12 +201,6 @@ if (dateElement) {
 
 }
 
-const searchInput = document.getElementById("searchInput");
-
-if (searchInput) {
-
-searchInput.addEventListener("keyup", function () {
-
 let value = this.value.toLowerCase();
 
 let cards = document.querySelectorAll(".card");
