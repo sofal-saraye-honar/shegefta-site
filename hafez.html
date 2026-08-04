@@ -60,8 +60,7 @@
 
 </section>
 
-
-<section class="card">
+<section class="card hafez-box">
 
 <div class="icon">
 📖🌹
@@ -72,11 +71,17 @@
 </h2>
 
 <p>
-فال حافظ همراه با غزل، معنی و تفسیر به زودی در شگفتا.
+نیت کن، سپس روی دکمه زیر کلیک کن.
 </p>
 
-</section>
+<button onclick="getHafez()">
+🌹 گرفتن فال حافظ
+</button>
 
+<div id="hafez-result">
+</div>
+
+</section>
 
 <div class="back-center">
 
@@ -95,7 +100,42 @@
 
 </footer>
 
+<script>
 
+const hafez = [
+
+{
+poem:"الا یا ایها الساقی ادر کاساً و ناولها<br>که عشق آسان نمود اول ولی افتاد مشکل‌ها",
+meaning:"این فال نشان می‌دهد با صبر و امید، سختی‌ها آسان می‌شوند و نتیجه خوبی در انتظار شماست."
+},
+
+{
+poem:"دوش دیدم که ملائک در میخانه زدند<br>گل آدم بسرشتند و به پیمانه زدند",
+meaning:"نشانه تغییر مثبت و شروع یک مسیر تازه در زندگی است."
+},
+
+{
+poem:"صبح است ساقیا قدحی پر شراب کن<br>دور فلک درنگ ندارد شتاب کن",
+meaning:"فرصت‌ها را از دست نده و با امید برای آینده قدم بردار."
+}
+
+];
+
+
+function getHafez(){
+
+let random = Math.floor(Math.random() * hafez.length);
+
+document.getElementById("hafez-result").innerHTML =
+
+"<h3>🌹 غزل حافظ</h3>" +
+"<p>" + hafez[random].poem + "</p>" +
+"<h3>✨ تفسیر</h3>" +
+"<p>" + hafez[random].meaning + "</p>";
+
+}
+
+</script>
 </body>
 
 </html>
