@@ -200,3 +200,31 @@ if (dateElement) {
     today.toLocaleDateString("fa-IR", options);
 
 }
+
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+
+searchInput.addEventListener("keyup", function () {
+
+let value = this.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+if(card.innerText.toLowerCase().includes(value)){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+}
