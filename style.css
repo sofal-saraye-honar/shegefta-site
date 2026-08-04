@@ -558,3 +558,19 @@ line-height:2;
 color:#6d4c41;
 
 }
+
+.hafez-box{
+    text-align:center;
+}
+
+.hafez-book{
+    margin:20px auto;
+    text-align:center;
+    cursor:pointer;
+}
+
+#hafez-result{
+    text-align:center;
+    margin-top:20px;
+    line-height:2;
+}
