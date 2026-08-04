@@ -176,6 +176,7 @@ placeholder="🔍 جستجو در شگفتا">
 
 <a href="quotes.html" class="card">
 <img src="images/sentence.jpg" alt="جملات زیبا و انگیزشی شگفتا">
+<h2>جملات زیبا</h2>
 <p>جملات انگیزشی، عاشقانه و آرامش‌بخش</p>
 </a>
 
@@ -191,8 +192,8 @@ placeholder="🔍 جستجو در شگفتا">
 <p>مطالب جالب و شگفت‌انگیز</p>
 </a>
 
-<img src="images/download.jpg" alt="دانلود فایل های مفید شگفتا">
-<img src="images/download.jpg" alt="دانلود کتاب و فایل های مفید">
+<a href="download.html" class="card">
+<img src="images/download.jpg" alt="دانلود کتاب و فایل‌های مفید شگفتا">
 <h2>دانلود</h2>
 <p>دانلود کتاب و فایل‌های مفید</p>
 </a>
@@ -340,10 +341,26 @@ const zekrDays = [
 
 
 // تبدیل شماره روز جاوااسکریپت به روز ایرانی
-let day = new Date().getDay();
+const day = new Date().getDay();
 
-let index = [6,0,1,2,3,4,5][day];
+// جاوااسکریپت:
+// 0=یکشنبه
+// 1=دوشنبه
+// 2=سه‌شنبه
+// 3=چهارشنبه
+// 4=پنجشنبه
+// 5=جمعه
+// 6=شنبه
 
+const index = {
+  6: 0, // شنبه
+  0: 1, // یکشنبه
+  1: 2, // دوشنبه
+  2: 3, // سه‌شنبه
+  3: 4, // چهارشنبه
+  4: 5, // پنجشنبه
+  5: 6  // جمعه
+}[day];
 
 document.getElementById("today-zekr").innerHTML =
 zekrDays[index];
