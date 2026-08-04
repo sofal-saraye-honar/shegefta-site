@@ -4,30 +4,37 @@
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/</loc>
+<priority>1.0</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/dua.html</loc>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/tasbihat.html</loc>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/today-dua.html</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/zekr.html</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/hafez.html</loc>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://sofal-saraye-honar.github.io/shegefta-site/knowledge.html</loc>
+<priority>0.8</priority>
 </url>
 
 </urlset>
