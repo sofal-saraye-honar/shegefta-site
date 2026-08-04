@@ -71,14 +71,22 @@
 </h2>
 
 <p>
-نیت کن، سپس روی دکمه زیر کلیک کن.
+نیت کن و روی کتاب کلیک کن تا فال حافظ خود را ببینی.
+</p> 
+ 
+<div class="hafez-book" onclick="getHafez()">
+
+📖🌹
+
+<p>
+برای گرفتن فال<br>
+روی کتاب کلیک کنید
 </p>
 
-<button onclick="getHafez()">
-🌹 گرفتن فال حافظ
-</button>
+</div>
 
 <div id="hafez-result">
+🌹 نیت کن و روی کتاب کلیک کن...
 </div>
 
 </section>
@@ -124,6 +132,9 @@ meaning:"فرصت‌ها را از دست نده و با امید برای آی�
 
 function getHafez(){
 
+ let book = document.querySelector(".hafez-book");
+
+book.classList.add("rotate");
 let random = Math.floor(Math.random() * hafez.length);
 
 document.getElementById("hafez-result").innerHTML =
@@ -132,10 +143,13 @@ document.getElementById("hafez-result").innerHTML =
 "<p>" + hafez[random].poem + "</p>" +
 "<h3>✨ تفسیر</h3>" +
 "<p>" + hafez[random].meaning + "</p>";
-
+setTimeout(function(){
+book.classList.remove("rotate");
+},1000);
 }
 
 </script>
+
 </body>
 
 </html>
