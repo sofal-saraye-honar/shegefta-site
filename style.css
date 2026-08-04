@@ -598,3 +598,24 @@ color:#6d4c41;
     text-align:center;
     margin-top:20px;
 }
+
+.hafez-box{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    margin:30px auto;
+    width:80%;
+    text-align:center;
+}
+
+.hafez-book{
+    text-align:center;
+    margin:20px auto;
+    cursor:pointer;
+}
+
+#hafez-result{
+    text-align:center;
+    margin-top:25px;
+    line-height:2;
+}
