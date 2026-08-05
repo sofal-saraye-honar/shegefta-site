@@ -261,17 +261,39 @@ function topFunction(){
 // ------------------------------
 
 const quotes = [
+
 "هر روز، فرصتی تازه برای شروعی دوباره است. 🌱",
+
 "امید، روشن‌ترین چراغ مسیر زندگی است. ✨",
+
 "آرامش از درون انسان آغاز می‌شود. 🌸",
+
 "لبخند تو می‌تواند روز کسی را زیباتر کند. 😊",
+
 "با خدا که باشی، هیچ راهی بن‌بست نیست. 🤍",
-"امروز بهترین زمان برای ساختن فرداست. 🌿"
+
+"امروز بهترین زمان برای ساختن فرداست. 🌿",
+
+"خدا همیشه بهترین زمان را برای اجابت دعا می‌داند. 🤲",
+
+"مهربانی سرمایه‌ای است که هیچ‌وقت کم نمی‌شود. 💚",
+
+"هر قدم کوچک، تو را به هدفت نزدیک‌تر می‌کند. ⭐",
+
+"دل آرام، زندگی زیبا می‌سازد. 🌺"
+
 ];
 
 const quoteBox = document.getElementById("todayQuote");
 
 if (quoteBox) {
-    const random = Math.floor(Math.random() * quotes.length);
-    quoteBox.innerHTML = quotes[random];
+
+const today = new Date();
+
+const dayNumber = Math.floor(today.getTime() / 86400000);
+
+const index = dayNumber % quotes.length;
+
+quoteBox.innerHTML = quotes[index];
+
 }
