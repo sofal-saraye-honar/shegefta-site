@@ -190,14 +190,17 @@ if (dateElement) {
     const today = new Date();
 
     const options = {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        weekday: "long"
-    };
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+};
 
-    dateElement.innerHTML =
-    today.toLocaleDateString("fa-IR", options);
+dateElement.innerHTML = new Intl.DateTimeFormat(
+    "fa-IR",
+    options
+).format(new Date());
+  
 
 }
 
