@@ -246,3 +246,32 @@ function topFunction(){
     });
 
 }
+
+function topFunction(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+// ------------------------------
+// سخن امروز
+// ------------------------------
+
+const quotes = [
+"هر روز، فرصتی تازه برای شروعی دوباره است. 🌱",
+"امید، روشن‌ترین چراغ مسیر زندگی است. ✨",
+"آرامش از درون انسان آغاز می‌شود. 🌸",
+"لبخند تو می‌تواند روز کسی را زیباتر کند. 😊",
+"با خدا که باشی، هیچ راهی بن‌بست نیست. 🤍",
+"امروز بهترین زمان برای ساختن فرداست. 🌿"
+];
+
+const quoteBox = document.getElementById("todayQuote");
+
+if (quoteBox) {
+    const random = Math.floor(Math.random() * quotes.length);
+    quoteBox.innerHTML = quotes[random];
+}
