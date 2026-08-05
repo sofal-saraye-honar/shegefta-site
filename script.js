@@ -297,3 +297,14 @@ const index = dayNumber % quotes.length;
 quoteBox.innerHTML = quotes[index];
 
 }
+
+function closeWelcome(){
+document.getElementById("welcomePopup").style.display="none";
+}
+
+setTimeout(function(){
+const box=document.getElementById("welcomePopup");
+if(box){
+box.style.display="flex";
+}
+},800);
