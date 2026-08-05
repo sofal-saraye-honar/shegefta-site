@@ -685,3 +685,14 @@ transition:.3s;
 transform:scale(1.1);
 
 }
+
+.date-box{
+    text-align:center;
+    margin:20px auto;
+    padding:12px;
+    width:fit-content;
+    background:#fff8e7;
+    border-radius:15px;
+    font-size:18px;
+    color:#6d4c41;
+}
