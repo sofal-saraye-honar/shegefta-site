@@ -762,3 +762,126 @@ font-size:18px;
 font-weight:bold;
 color:#444;
 }
+
+/* ==========================
+   کارت سخن امروز شگفتا
+========================== */
+
+.quote-box{
+
+position:relative;
+max-width:650px;
+margin:50px auto;
+padding:35px 25px;
+text-align:center;
+
+background:#fffdf7;
+
+border-radius:25px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.12);
+
+overflow:hidden;
+
+animation: softCard 4s ease-in-out infinite alternate;
+
+}
+
+
+.quote-box h2{
+
+color:#8d6e63;
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+
+.quote-box p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#555;
+
+min-height:60px;
+
+animation: textShow 1.5s ease;
+
+}
+
+
+/* فرشته */
+
+.angel{
+
+position:absolute;
+
+top:10px;
+
+right:20px;
+
+font-size:45px;
+
+animation: angelMove 3s ease-in-out infinite;
+
+}
+
+
+/* حرکت آرام کارت */
+
+@keyframes softCard{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-6px);
+}
+
+}
+
+
+/* حرکت فرشته */
+
+@keyframes angelMove{
+
+0%{
+transform:translateY(0) rotate(-5deg);
+}
+
+50%{
+transform:translateY(-10px) rotate(5deg);
+}
+
+100%{
+transform:translateY(0) rotate(-5deg);
+}
+
+}
+
+
+/* ظاهر شدن متن */
+
+@keyframes textShow{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
