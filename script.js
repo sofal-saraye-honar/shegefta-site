@@ -193,16 +193,25 @@ if (dateElement) {
 
     const today = new Date();
 
-    const options = {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    };
+    const weekday = new Intl.DateTimeFormat("fa-IR", {
+    weekday: "long"
+}).format(today);
 
-    dateElement.innerHTML =
-        "📅 " + new Intl.DateTimeFormat("fa-IR", options).format(today);
+const day = new Intl.DateTimeFormat("fa-IR", {
+    day: "numeric"
+}).format(today);
 
+const month = new Intl.DateTimeFormat("fa-IR", {
+    month: "long"
+}).format(today);
+
+const year = new Intl.DateTimeFormat("fa-IR", {
+    year: "numeric"
+}).format(today);
+
+
+dateElement.innerHTML =
+"📅 " + weekday + " " + day + " " + month + " " + year;
 }
 
 
