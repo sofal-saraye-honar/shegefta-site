@@ -183,6 +183,10 @@ if (falBtn && falResult) {
 
 }
 
+// ------------------------------
+// تاریخ امروز
+// ------------------------------
+
 const dateElement = document.getElementById("date");
 
 if (dateElement) {
@@ -190,65 +194,46 @@ if (dateElement) {
     const today = new Date();
 
     const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-};
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
 
-dateElement.innerHTML = new Intl.DateTimeFormat(
-    "fa-IR",
-    options
-).format(new Date());
-  
+    dateElement.innerHTML =
+        "📅 " + new Intl.DateTimeFormat("fa-IR", options).format(today);
 
 }
 
-let value = this.value.toLowerCase();
 
-let cards = document.querySelectorAll(".card");
-
-cards.forEach(function(card){
-
-if(card.innerText.toLowerCase().includes(value)){
-
-card.style.display = "block";
-
-}else{
-
-card.style.display = "none";
-
-}
-
-});
-
-});
-
-}
+// ------------------------------
+// رفتن به بالای صفحه
+// ------------------------------
 
 const topBtn = document.getElementById("topBtn");
 
 window.onscroll = function(){
 
-if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+    if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
 
-topBtn.style.display = "block";
+        topBtn.style.display = "block";
 
-}else{
+    }else{
 
-topBtn.style.display = "none";
+        topBtn.style.display = "none";
 
-}
+    }
 
 };
 
+
 function topFunction(){
 
-window.scrollTo({
+    window.scrollTo({
 
-top:0,
-behavior:"smooth"
+        top:0,
+        behavior:"smooth"
 
-});
+    });
 
 }
