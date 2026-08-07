@@ -1042,3 +1042,29 @@ transform:translateY(-8px);
 }
 
 }
+
+.angel-box{
+
+font-size:55px;
+
+animation:angelFloat 3s ease-in-out infinite;
+
+margin-bottom:15px;
+
+}
+
+@keyframes angelFloat{
+
+0%,100%{
+
+transform:translateY(0) rotate(-3deg);
+
+}
+
+50%{
+
+transform:translateY(-10px) rotate(3deg);
+
+}
+
+}
