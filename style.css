@@ -1613,5 +1613,101 @@ transform: scale(1.05);
     .library-shelf p {
         font-size: 12px;
     }
+}
 
+/* ==========================
+قصه‌های کودک
+========================== */
+
+.children-page {
+max-width: 900px;
+margin: 40px auto;
+padding: 30px 20px;
+text-align: center;
+}
+
+.children-icon {
+font-size: 70px;
+margin-bottom: 10px;
+}
+
+.children-page h1 {
+color: #6d4c41;
+margin-bottom: 10px;
+}
+
+.children-intro {
+color: #777;
+font-size: 18px;
+margin-bottom: 35px;
+}
+
+.story-card {
+background: #fffdf8;
+border-radius: 20px;
+padding: 30px;
+margin: 30px auto;
+box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+text-align: right;
+line-height: 2.2;
+}
+
+.story-card h2 {
+text-align: center;
+color: #6d4c41;
+margin-bottom: 25px;
+}
+
+.story-card p {
+margin: 0 0 18px;
+}
+
+.story-dialogue {
+background: #fdf3df;
+border-radius: 12px;
+padding: 12px 18px;
+color: #5d4037;
+}
+
+.story-message {
+margin-top: 25px;
+padding: 20px;
+background: #eef7e8;
+border-radius: 15px;
+text-align: center;
+}
+
+.story-message h3 {
+margin-top: 0;
+color: #5f7d4a;
+}
+
+.story-message p {
+margin-bottom: 0;
+font-weight: bold;
+}
+
+.story-ending {
+background: #fdf7ef;
+border-radius: 20px;
+padding: 30px;
+margin: 35px auto;
+line-height: 2.2;
+}
+
+.story-ending h2 {
+color: #6d4c41;
+}
+
+.children-buttons {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex-wrap: wrap;
+margin: 30px 0;
+}
+
+.children-buttons a {
+text-decoration: none;
 }
