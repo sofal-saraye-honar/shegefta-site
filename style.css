@@ -1502,3 +1502,116 @@ transform: scale(1.05);
 }
 
 }
+
+/* =========================
+   مرتب و جمع‌وجور کردن کتابخانه
+========================= */
+
+.library-page {
+    padding-top: 35px;
+}
+
+.library-big-icon {
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+
+.library-page h1 {
+    font-size: 32px;
+    margin: 5px 0 8px;
+}
+
+.library-intro {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* دسته‌بندی‌های بالایی */
+
+.library-shelves {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.library-shelf {
+    padding: 18px 10px !important;
+    min-height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.library-shelf span {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.library-shelf h2 {
+    font-size: 17px;
+    margin: 5px 0;
+}
+
+.library-shelf p {
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+/* آرشیو */
+
+.library-archive {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.library-archive > h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.shelf-subtitle {
+    margin-bottom: 25px;
+}
+
+/* موبایل */
+
+@media (max-width: 800px) {
+
+    .library-shelves {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .library-shelf {
+        min-height: 125px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .library-big-icon {
+        font-size: 45px;
+    }
+
+    .library-page h1 {
+        font-size: 27px;
+    }
+
+    .library-shelves {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .library-shelf h2 {
+        font-size: 15px;
+    }
+
+    .library-shelf p {
+        font-size: 12px;
+    }
+
+}
