@@ -1,1 +1,187 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>۴۰۴ | شگفتا</title><style>
 
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Tahoma, Arial, sans-serif;
+    background:linear-gradient(135deg,#fdf7ef,#dff5ee);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#5d4037;
+}
+
+.game-box{
+    width:90%;
+    max-width:650px;
+    background:rgba(255,255,255,.92);
+    border-radius:30px;
+    padding:35px 25px;
+    box-shadow:0 15px 45px rgba(0,0,0,.15);
+}
+
+.game-icon{
+    font-size:70px;
+    animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+h1{
+    font-size:65px;
+    margin:5px 0;
+}
+
+h2{
+    margin:10px 0;
+}
+
+p{
+    line-height:2;
+}
+
+.maze{
+    margin:25px auto;
+    max-width:350px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.cell{
+    height:75px;
+    border-radius:18px;
+    background:#e8f5f0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+}
+
+.player{
+    background:#b2dfdb;
+}
+
+.goal{
+    background:#ffe0b2;
+}
+
+button{
+    border:none;
+    border-radius:15px;
+    padding:12px 20px;
+    margin:5px;
+    font-size:18px;
+    cursor:pointer;
+    background:#8d6e63;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.message{
+    min-height:35px;
+    font-weight:bold;
+}
+
+.home-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:13px 25px;
+    border-radius:15px;
+    background:#00897b;
+    color:white;
+    text-decoration:none;
+}
+
+</style></head><body><div class="game-box"><div class="game-icon">
+🦉✨
+</div><h1>۴۰۴</h1><h2>اوه! این صفحه گم شده 😄</h2><p>
+نقشین مسیر صفحه را پیدا نکرده! 🦉
+<br>
+کمکش کن به خانه‌ی شگفتا برگردد.
+</p><!-- بازی --><div class="maze" id="maze"><div class="cell player" id="cell0">🦉</div>
+<div class="cell" id="cell1">🌱</div>
+<div class="cell" id="cell2">⭐</div><div class="cell" id="cell3">🌸</div>
+<div class="cell" id="cell4">📖</div>
+<div class="cell" id="cell5">🌙</div><div class="cell" id="cell6">✨</div>
+<div class="cell" id="cell7">🏠</div>
+<div class="cell goal" id="cell8">🏡</div></div><p class="message" id="message">
+نقشین را به 🏡 برسان!
+</p><div><button onclick="move(-3)">
+⬆️
+</button><br><button onclick="move(-1)">
+➡️
+</button><button onclick="move(1)">
+⬅️
+</button><br><button onclick="move(3)">
+⬇️
+</button></div><a href="index.html" class="home-btn">
+🏠 بازگشت به شگفتا
+</a></div><script>
+
+let position = 0;
+
+const goal = 8;
+
+function move(step){
+
+    const newPosition = position + step;
+
+    if(
+        newPosition < 0 ||
+        newPosition > 8 ||
+        (step === -1 && position % 3 === 0) ||
+        (step === 1 && position % 3 === 2)
+    ){
+
+        document.getElementById("message").textContent =
+        "🚧 این مسیر بسته است! یک راه دیگر امتحان کن.";
+
+        return;
+    }
+
+
+    document.getElementById("cell" + position).classList.remove("player");
+
+    position = newPosition;
+
+    document.getElementById("cell" + position).classList.add("player");
+
+
+    if(position === goal){
+
+        document.getElementById("message").textContent =
+        "🎉 آفرین! نقشین راه خانه را پیدا کرد!";
+
+        setTimeout(function(){
+
+            window.location.href = "index.html";
+
+        },1500);
+
+    }else{
+
+        document.getElementById("message").textContent =
+        "✨ خوبه! ادامه بده، نقشین نزدیک‌تر شد.";
+
+    }
+
+}
+
+</script></body></html>
