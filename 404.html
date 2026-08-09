@@ -1,184 +1,363 @@
-<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>۴۰۴ | شگفتا</title><style>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>شگفتا | صفحه پیدا نشد</title><style>
 
 *{
     box-sizing:border-box;
 }
 
 body{
+
     margin:0;
+
     min-height:100vh;
+
     font-family:Tahoma, Arial, sans-serif;
-    background:linear-gradient(135deg,#fdf7ef,#dff5ee);
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
+
     color:#5d4037;
+
+    background:
+    radial-gradient(circle at top, #fffdf5, #e8f5e9);
+
+    overflow:hidden;
 }
 
-.game-box{
-    width:90%;
-    max-width:650px;
-    background:rgba(255,255,255,.92);
+
+/* ستاره‌های پس‌زمینه */
+
+.star{
+
+    position:fixed;
+
+    color:#ffd54f;
+
+    font-size:20px;
+
+    animation:twinkle 2s infinite alternate;
+
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+}
+
+
+/* کارت اصلی */
+
+.error-card{
+
+    width:min(92%,650px);
+
+    padding:35px 25px 40px;
+
+    background:rgba(255,255,255,.9);
+
     border-radius:30px;
-    padding:35px 25px;
-    box-shadow:0 15px 45px rgba(0,0,0,.15);
+
+    box-shadow:
+    0 15px 45px rgba(93,64,55,.18);
+
+    position:relative;
+
+    z-index:2;
 }
 
-.game-icon{
+
+/* جغد */
+
+.owl{
+
     font-size:70px;
-    animation:float 2s infinite ease-in-out;
+
+    animation:owlMove 2s infinite ease-in-out;
 }
 
-@keyframes float{
+@keyframes owlMove{
+
     0%,100%{
-        transform:translateY(0);
+        transform:rotate(-5deg);
     }
 
     50%{
-        transform:translateY(-12px);
+        transform:rotate(5deg) translateY(-8px);
     }
+
 }
 
+
+/* نقشین */
+
+.avatar{
+
+    width:100px;
+
+    height:100px;
+
+    object-fit:contain;
+
+    margin:10px auto;
+
+    display:block;
+
+    border-radius:50%;
+}
+
+
+/* متن */
+
 h1{
-    font-size:65px;
-    margin:5px 0;
+
+    font-size:42px;
+
+    margin:10px 0;
+
+    color:#6d4c41;
 }
 
 h2{
-    margin:10px 0;
-}
 
-p{
-    line-height:2;
-}
+    color:#00897b;
 
-.maze{
-    margin:25px auto;
-    max-width:350px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-}
-
-.cell{
-    height:75px;
-    border-radius:18px;
-    background:#e8f5f0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:32px;
-}
-
-.player{
-    background:#b2dfdb;
-}
-
-.goal{
-    background:#ffe0b2;
-}
-
-button{
-    border:none;
-    border-radius:15px;
-    padding:12px 20px;
-    margin:5px;
-    font-size:18px;
-    cursor:pointer;
-    background:#8d6e63;
-    color:white;
-}
-
-button:hover{
-    transform:scale(1.05);
+    margin:10px 0 20px;
 }
 
 .message{
-    min-height:35px;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+/* بازی */
+
+.game-box{
+
+    margin:25px auto;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:#fdf7ef;
+
+    border:2px dashed #d7b98c;
+}
+
+.game-title{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.score{
+
+    font-size:18px;
+
     font-weight:bold;
+
+    color:#00897b;
 }
 
-.home-btn{
+
+/* ستاره بازی */
+
+.game-star{
+
     display:inline-block;
-    margin-top:10px;
-    padding:13px 25px;
-    border-radius:15px;
-    background:#00897b;
-    color:white;
-    text-decoration:none;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.2s;
+
+    animation:gameStar 1.5s infinite alternate;
 }
 
-</style></head><body><div class="game-box"><div class="game-icon">
-🦉✨
-</div><h1>۴۰۴</h1><h2>اوه! این صفحه گم شده 😄</h2><p>
-نقشین مسیر صفحه را پیدا نکرده! 🦉
-<br>
-کمکش کن به خانه‌ی شگفتا برگردد.
-</p><!-- بازی --><div class="maze" id="maze"><div class="cell player" id="cell0">🦉</div>
-<div class="cell" id="cell1">🌱</div>
-<div class="cell" id="cell2">⭐</div><div class="cell" id="cell3">🌸</div>
-<div class="cell" id="cell4">📖</div>
-<div class="cell" id="cell5">🌙</div><div class="cell" id="cell6">✨</div>
-<div class="cell" id="cell7">🏠</div>
-<div class="cell goal" id="cell8">🏡</div></div><p class="message" id="message">
-نقشین را به 🏡 برسان!
-</p><div><button onclick="move(-3)">
-⬆️
-</button><br><button onclick="move(-1)">
-➡️
-</button><button onclick="move(1)">
-⬅️
-</button><br><button onclick="move(3)">
-⬇️
-</button></div><a href="index.html" class="home-btn">
-🏠 بازگشت به شگفتا
-</a></div><script>
+.game-star:hover{
 
-let position = 0;
+    transform:scale(1.3) rotate(15deg);
+}
 
-const goal = 8;
+@keyframes gameStar{
 
-function move(step){
-
-    const newPosition = position + step;
-
-    if(
-        newPosition < 0 ||
-        newPosition > 8 ||
-        (step === -1 && position % 3 === 0) ||
-        (step === 1 && position % 3 === 2)
-    ){
-
-        document.getElementById("message").textContent =
-        "🚧 این مسیر بسته است! یک راه دیگر امتحان کن.";
-
-        return;
+    from{
+        transform:translateY(0);
     }
 
+    to{
+        transform:translateY(-8px);
+    }
 
-    document.getElementById("cell" + position).classList.remove("player");
-
-    position = newPosition;
-
-    document.getElementById("cell" + position).classList.add("player");
+}
 
 
-    if(position === goal){
+/* دکمه */
 
-        document.getElementById("message").textContent =
-        "🎉 آفرین! نقشین راه خانه را پیدا کرد!";
+.home-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    background:#00897b;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+    transition:.3s;
+}
+
+.home-btn.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+.home-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,137,123,.25);
+}
+
+
+/* موبایل */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:21px;
+    }
+
+    .message{
+        font-size:16px;
+    }
+
+    .owl{
+        font-size:60px;
+    }
+
+}
+
+</style></head><body><!-- ستاره‌های پس‌زمینه --><div class="star" style="top:8%;left:10%;">✨</div>
+<div class="star" style="top:20%;left:85%;">⭐</div>
+<div class="star" style="top:70%;left:8%;">✨</div>
+<div class="star" style="top:80%;left:90%;">⭐</div>
+<div class="star" style="top:45%;left:5%;">🌟</div>
+<div class="star" style="top:12%;left:50%;">✨</div><div class="error-card"><!-- جغد --><div class="owl">
+🦉
+</div><!-- نقشین --><img
+src="images/role.gif"
+alt="نقشین"
+class="avatar"
+onerror="this.style.display='none';"
+
+«»
+
+<h1>
+۴۰۴
+</h1><h2>
+🌱 این صفحه گم شده!
+</h2><p class="message">نقشین و جغد شگفتا همه‌جا را گشتند،
+اما این صفحه را پیدا نکردند! 😅
+
+<br>شاید آدرس را اشتباه زده‌ای...
+اما قبل از برگشتن یک بازی کوچولو داریم! 🎮
+
+</p><!-- بازی --><div class="game-box"><div class="game-title">⭐ روی ستاره کلیک کن!
+
+</div><div class="score">امتیاز:
+<span id="score">0</span>
+از 5
+
+</div><br><div
+id="gameStar"
+class="game-star"
+onclick="catchStar()">⭐
+
+</div></div><!-- دکمه خانه --><a
+id="homeBtn"
+href="index.html"
+class="home-btn">
+
+🏠 برگشت به شگفتا
+
+</a></div><script>
+
+let score = 0;
+
+function catchStar(){
+
+    score++;
+
+    document.getElementById("score").textContent = score;
+
+    const star =
+    document.getElementById("gameStar");
+
+    if(score < 5){
+
+        star.textContent = "✨";
 
         setTimeout(function(){
 
-            window.location.href = "index.html";
+            star.textContent = "⭐";
 
-        },1500);
+        },300);
 
-    }else{
+    }
 
-        document.getElementById("message").textContent =
-        "✨ خوبه! ادامه بده، نقشین نزدیک‌تر شد.";
+    if(score >= 5){
+
+        star.textContent = "🎉";
+
+        document.querySelector(".game-title").textContent =
+        "آفرین! صفحه پیدا شد! 🎉";
+
+        document.getElementById("homeBtn")
+        .classList.add("active");
 
     }
 
