@@ -64,16 +64,27 @@ body{
 }
 
 /* زمین */
-    
+
 .ground{
     position:absolute;
     bottom:140px;
+    left:0;
+    width:100%;
+    height:8px;
+    background:#6d4c41;
+}
 
 /* آدمک */
+
 .player{
     position:absolute;
     left:100px;
     bottom:148px;
+    width:60px;
+    height:70px;
+    font-size:55px;
+    z-index:5;
+}
 
 /* پرش */
 
@@ -98,10 +109,20 @@ body{
 }
 
 /* مانع */
+
 .obstacle{
     position:absolute;
     right:-80px;
-    bottom:148px;
+    bottom:88px;
+
+    width:60px;
+    height:70px;
+
+    font-size:55px;
+
+    animation:obstacleMove 2.5s linear;
+}
+
 @keyframes obstacleMove{
 
     from{
