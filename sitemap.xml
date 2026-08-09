@@ -2,39 +2,89 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/</loc>
-<priority>1.0</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/</loc>
+        <priority>1.0</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/dua.html</loc>
-<priority>0.9</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/dua.html</loc>
+        <priority>0.9</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/tasbihat.html</loc>
-<priority>0.9</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/tasbihat.html</loc>
+        <priority>0.9</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/today-dua.html</loc>
-<priority>0.8</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/today-dua.html</loc>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/zekr.html</loc>
-<priority>0.8</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/zekr.html</loc>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/hafez.html</loc>
-<priority>0.9</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/hafez.html</loc>
+        <priority>0.9</priority>
+    </url>
 
-<url>
-<loc>https://sofal-saraye-honar.github.io/shegefta-site/knowledge.html</loc>
-<priority>0.8</priority>
-</url>
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/quotes.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/learn.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/knowledge.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/download.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/library.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/children.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/quran-stories.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/novels.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/short-stories.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/about.html</loc>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://sofal-saraye-honar.github.io/shegefta-site/contact.html</loc>
+        <priority>0.6</priority>
+    </url>
 
 </urlset>
