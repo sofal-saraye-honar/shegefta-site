@@ -1,365 +1,470 @@
-<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>شگفتا | صفحه پیدا نشد</title><style>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>شگفتا | ۴۰۴</title><style>
 
 *{
     box-sizing:border-box;
 }
 
 body{
-
     margin:0;
-
     min-height:100vh;
-
-    font-family:Tahoma, Arial, sans-serif;
-
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f7f2e8;
+    color:#4e342e;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    text-align:center;
-
-    color:#5d4037;
-
-    background:
-    radial-gradient(circle at top, #fffdf5, #e8f5e9);
-
     overflow:hidden;
 }
 
-
-/* ستاره‌های پس‌زمینه */
-
-.star{
-
-    position:fixed;
-
-    color:#ffd54f;
-
-    font-size:20px;
-
-    animation:twinkle 2s infinite alternate;
-
-    pointer-events:none;
+.page{
+    width:min(95%,900px);
+    text-align:center;
 }
 
-@keyframes twinkle{
-
-    from{
-        opacity:.2;
-        transform:scale(.7);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1.2);
-    }
-
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-
-/* کارت اصلی */
-
-.error-card{
-
-    width:min(92%,650px);
-
-    padding:35px 25px 40px;
-
-    background:rgba(255,255,255,.9);
-
-    border-radius:30px;
-
-    box-shadow:
-    0 15px 45px rgba(93,64,55,.18);
-
-    position:relative;
-
-    z-index:2;
+.title{
+    font-size:38px;
+    margin:5px 0;
 }
 
-
-/* جغد */
-
-.owl{
-
-    font-size:70px;
-
-    animation:owlMove 2s infinite ease-in-out;
+.subtitle{
+    margin:5px 0 20px;
+    color:#777;
 }
-
-@keyframes owlMove{
-
-    0%,100%{
-        transform:rotate(-5deg);
-    }
-
-    50%{
-        transform:rotate(5deg) translateY(-8px);
-    }
-
-}
-
-
-/* نقشین */
-
-.avatar{
-
-    width:100px;
-
-    height:100px;
-
-    object-fit:contain;
-
-    margin:10px auto;
-
-    display:block;
-
-    border-radius:50%;
-}
-
-
-/* متن */
-
-h1{
-
-    font-size:42px;
-
-    margin:10px 0;
-
-    color:#6d4c41;
-}
-
-h2{
-
-    color:#00897b;
-
-    margin:10px 0 20px;
-}
-
-.message{
-
-    font-size:18px;
-
-    line-height:2;
-
-}
-
 
 /* بازی */
 
-.game-box{
-
-    margin:25px auto;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    background:#fdf7ef;
-
-    border:2px dashed #d7b98c;
+.game{
+    position:relative;
+    width:100%;
+    height:260px;
+    background:
+        linear-gradient(#e8f5e9 0 68%,#fff 68% 100%);
+    border-radius:25px;
+    overflow:hidden;
+    border:3px solid #d7c4a3;
+    box-shadow:0 12px 30px rgba(80,60,40,.15);
 }
 
-.game-title{
+/* ابرها */
 
-    font-size:20px;
+.cloud{
+    position:absolute;
+    font-size:38px;
+    opacity:.65;
+}
 
+.cloud.one{
+    top:25px;
+    left:18%;
+}
+
+.cloud.two{
+    top:65px;
+    left:70%;
+}
+
+/* زمین */
+
+.ground{
+    position:absolute;
+    bottom:42px;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#795548;
+}
+
+/* آدمک */
+
+.player{
+    position:absolute;
+    left:70px;
+    bottom:47px;
+    width:42px;
+    height:65px;
+    z-index:5;
+}
+
+.head{
+    position:absolute;
+    top:0;
+    left:7px;
+    width:29px;
+    height:29px;
+    background:#ffd7b5;
+    border-radius:50%;
+    border:2px solid #5d4037;
+}
+
+.hat{
+    position:absolute;
+    top:-5px;
+    left:2px;
+    width:39px;
+    height:16px;
+    background:#e53935;
+    border-radius:20px 20px 5px 5px;
+}
+
+.body{
+    position:absolute;
+    top:27px;
+    left:9px;
+    width:25px;
+    height:25px;
+    background:#2196f3;
+    border-radius:6px;
+}
+
+.leg{
+    position:absolute;
+    top:48px;
+    width:8px;
+    height:18px;
+    background:#5d4037;
+    border-radius:5px;
+}
+
+.leg.left{
+    left:9px;
+}
+
+.leg.right{
+    right:9px;
+}
+
+/* حالت پرش */
+
+.player.jump{
+    animation:jump .65s ease-out;
+}
+
+@keyframes jump{
+
+    0%{
+        bottom:47px;
+    }
+
+    45%{
+        bottom:155px;
+    }
+
+    100%{
+        bottom:47px;
+    }
+
+}
+
+/* مانع */
+
+.obstacle{
+    position:absolute;
+    bottom:47px;
+    right:-50px;
+    width:35px;
+    height:55px;
+    background:#43a047;
+    border-radius:8px 8px 3px 3px;
+    border:3px solid #2e7d32;
+}
+
+.obstacle::before{
+    content:"";
+    position:absolute;
+    top:-13px;
+    left:-5px;
+    width:39px;
+    height:15px;
+    background:#66bb6a;
+    border-radius:50%;
+}
+
+/* امتیاز */
+
+.score{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:10;
+}
+
+/* شروع */
+
+.start-message{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:rgba(255,255,255,.45);
+    z-index:20;
+}
+
+.start-message strong{
+    font-size:22px;
     margin-bottom:10px;
 }
 
-.score{
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    color:#00897b;
+.start-message span{
+    color:#666;
 }
-
-
-/* ستاره بازی */
-
-.game-star{
-
-    display:inline-block;
-
-    font-size:45px;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    transition:.2s;
-
-    animation:gameStar 1.5s infinite alternate;
-}
-
-.game-star:hover{
-
-    transform:scale(1.3) rotate(15deg);
-}
-
-@keyframes gameStar{
-
-    from{
-        transform:translateY(0);
-    }
-
-    to{
-        transform:translateY(-8px);
-    }
-
-}
-
 
 /* دکمه */
 
 .home-btn{
-
     display:inline-block;
-
-    margin-top:20px;
-
-    padding:14px 28px;
-
+    margin-top:22px;
+    padding:13px 28px;
     border-radius:30px;
-
     background:#00897b;
-
     color:white;
-
     text-decoration:none;
-
     font-size:17px;
-
-    opacity:.45;
-
-    pointer-events:none;
-
-    transition:.3s;
-}
-
-.home-btn.active{
-
-    opacity:1;
-
-    pointer-events:auto;
 }
 
 .home-btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 8px 20px rgba(0,137,123,.25);
+    transform:translateY(-2px);
 }
-
 
 /* موبایل */
 
-@media(max-width:500px){
+@media(max-width:600px){
 
-    h1{
-        font-size:32px;
+    .title{
+        font-size:30px;
     }
 
-    h2{
-        font-size:21px;
+    .game{
+        height:230px;
     }
 
-    .message{
-        font-size:16px;
-    }
-
-    .owl{
-        font-size:60px;
+    .player{
+        left:45px;
     }
 
 }
 
-</style></head><body><!-- ستاره‌های پس‌زمینه --><div class="star" style="top:8%;left:10%;">✨</div>
-<div class="star" style="top:20%;left:85%;">⭐</div>
-<div class="star" style="top:70%;left:8%;">✨</div>
-<div class="star" style="top:80%;left:90%;">⭐</div>
-<div class="star" style="top:45%;left:5%;">🌟</div>
-<div class="star" style="top:12%;left:50%;">✨</div><div class="error-card"><!-- جغد --><div class="owl">
-🦉
-</div><!-- نقشین --><img
-src="images/role.gif"
-alt="نقشین"
-class="avatar"
-onerror="this.style.display='none';"
-
-«»
-
-<h1>
+</style></head><body><div class="page"><div class="logo">
+✨ شگفتا ✨
+</div><h1 class="title">
 ۴۰۴
-</h1><h2>
-🌱 این صفحه گم شده!
-</h2><p class="message">نقشین و جغد شگفتا همه‌جا را گشتند،
-اما این صفحه را پیدا نکردند! 😅
-
-<br>شاید آدرس را اشتباه زده‌ای...
-اما قبل از برگشتن یک بازی کوچولو داریم! 🎮
-
-</p><!-- بازی --><div class="game-box"><div class="game-title">⭐ روی ستاره کلیک کن!
-
-</div><div class="score">امتیاز:
-<span id="score">0</span>
-از 5
-
-</div><br><div
-id="gameStar"
-class="game-star"
-onclick="catchStar()">⭐
-
-</div></div><!-- دکمه خانه --><a
-id="homeBtn"
-href="index.html"
-class="home-btn">
-
+</h1><p class="subtitle">
+این صفحه پیدا نشد؛ اما یک بازی کوچک منتظر توست! 🎮
+</p><div class="game" id="game"><div class="score">
+امتیاز: <span id="score">0</span>
+</div><div class="cloud one">
+☁️
+</div><div class="cloud two">
+☁️
+</div><div class="ground"></div><!-- آدمک قارچ‌خور --><div class="player" id="player"><div class="hat"></div><div class="head"></div><div class="body"></div><div class="leg left"></div><div class="leg right"></div></div><!-- مانع --><div class="obstacle" id="obstacle"></div><div class="start-message" id="startMessage"><strong>
+🎮 برای شروع بپر!
+</strong><span>
+با Space یا لمس صفحه
+</span></div></div><a href="index.html" class="home-btn">
 🏠 برگشت به شگفتا
-
 </a></div><script>
+
+const player =
+document.getElementById("player");
+
+const obstacle =
+document.getElementById("obstacle");
+
+const scoreText =
+document.getElementById("score");
+
+const startMessage =
+document.getElementById("startMessage");
+
+let playing = false;
 
 let score = 0;
 
-function catchStar(){
+let obstacleX = -50;
 
-    score++;
+let speed = 6;
 
-    document.getElementById("score").textContent = score;
+let jumping = false;
 
-    const star =
-    document.getElementById("gameStar");
 
-    if(score < 5){
+/* شروع بازی */
 
-        star.textContent = "✨";
+function startGame(){
 
-        setTimeout(function(){
+    if(!playing){
 
-            star.textContent = "⭐";
+        playing = true;
 
-        },300);
+        startMessage.style.display = "none";
+
+        gameLoop();
+
+    }
+
+    jump();
+
+}
+
+
+/* پرش */
+
+function jump(){
+
+    if(jumping) return;
+
+    jumping = true;
+
+    player.classList.add("jump");
+
+    setTimeout(function(){
+
+        player.classList.remove("jump");
+
+        jumping = false;
+
+    },650);
+
+}
+
+
+/* کنترل صفحه */
+
+document.addEventListener("keydown",function(e){
+
+    if(
+        e.code === "Space" ||
+        e.code === "ArrowUp"
+    ){
+
+        e.preventDefault();
+
+        startGame();
 
     }
 
-    if(score >= 5){
+});
 
-        star.textContent = "🎉";
 
-        document.querySelector(".game-title").textContent =
-        "آفرین! صفحه پیدا شد! 🎉";
+document.getElementById("game")
+.addEventListener("touchstart",function(){
 
-        document.getElementById("homeBtn")
-        .classList.add("active");
+    startGame();
+
+});
+
+
+document.getElementById("game")
+.addEventListener("mousedown",function(){
+
+    startGame();
+
+});
+
+
+/* بازی */
+
+function gameLoop(){
+
+    if(!playing) return;
+
+    obstacleX -= speed;
+
+    obstacle.style.right =
+    obstacleX + "px";
+
+
+    /* رسیدن مانع به بازیکن */
+
+    if(obstacleX < 90 && obstacleX > 25){
+
+        if(!jumping){
+
+            gameOver();
+
+            return;
+
+        }
 
     }
+
+
+    /* عبور از مانع */
+
+    if(obstacleX < -60){
+
+        obstacleX = 0;
+
+        score++;
+
+        scoreText.textContent = score;
+
+        if(score % 5 === 0){
+
+            speed += .5;
+
+        }
+
+    }
+
+
+    requestAnimationFrame(gameLoop);
+
+}
+
+
+/* پایان */
+
+function gameOver(){
+
+    playing = false;
+
+    startMessage.innerHTML =
+    "<strong>💥 باختی!</strong>" +
+    "<span>برای بازی دوباره لمس کن</span>";
+
+    startMessage.style.display = "flex";
+
+    startMessage.onclick = function(){
+
+        resetGame();
+
+    };
+
+}
+
+
+/* شروع دوباره */
+
+function resetGame(){
+
+    score = 0;
+
+    speed = 6;
+
+    obstacleX = -50;
+
+    scoreText.textContent = "0";
+
+    startMessage.onclick = null;
+
+    startMessage.style.display = "none";
+
+    playing = true;
+
+    gameLoop();
+
+    jump();
 
 }
 
