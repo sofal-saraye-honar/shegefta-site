@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>جملات زیبا | شگفتا</title>
+
+<meta name="description"
+      content="جملات زیبا، الهام‌بخش و آرامش‌بخش برای حال خوب در شگفتا.">
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><!-- ستاره‌های پس‌زمینه -->
+
+<div id="stars-container"></div>
+
+
+<main class="quotes-page">
+
+    <!-- عنوان -->
+
+    <div class="quotes-icon">
+        💬✨
+    </div>
+
+    <h1>
+        جملات زیبا
+    </h1>
+
+    <p class="quotes-intro">
+        گاهی یک جمله می‌تواند حال یک روز را عوض کند 🌱
+    </p>
+
+
+    <!-- جمله اصلی -->
+
+    <section class="quote-box">
+
+        <div class="quote-mark">
+            ❝
+        </div>
+
+        <p id="quoteText">
+            روی دکمه بزن تا یک جمله زیبا برایت انتخاب کنم...
+        </p>
+
+        <div class="quote-mark quote-mark-bottom">
+            ❞
+        </div>
+
+        <div class="quote-actions">
+
+            <button class="quote-btn"
+                    onclick="newQuote()">
+
+                ✨ جمله جدید
+
+            </button>
+
+
+            <button class="quote-btn"
+                    onclick="copyQuote()">
+
+                📋 کپی جمله
+
+            </button>
+
+
+            <button class="quote-btn favorite-btn"
+                    onclick="favoriteQuote()">
+
+                ❤️ مورد علاقه
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- پیام -->
+
+    <div id="quoteMessage"
+         class="quote-message">
+
+    </div>
+
+
+    <!-- دسته‌بندی‌ها -->
+
+    <section class="quote-categories">
+
+        <article class="quote-category">
+
+            <div>
+                🌱
+            </div>
+
+            <h2>
+                امید
+            </h2>
+
+            <p>
+                جمله‌هایی برای روزهایی
+                که به کمی امید نیاز داریم.
+            </p>
+
+            <button onclick="categoryQuote('hope')">
+                🌱 یک جمله
+            </button>
+
+        </article>
+
+
+        <article class="quote-category">
+
+            <div>
+                ❤️
+            </div>
+
+            <h2>
+                زندگی
+            </h2>
+
+            <p>
+                جمله‌هایی درباره زندگی،
+                انتخاب و تجربه.
+            </p>
+
+            <button onclick="categoryQuote('life')">
+                ❤️ یک جمله
+            </button>
+
+        </article>
+
+
+        <article class="quote-category">
+
+            <div>
+                🧠
+            </div>
+
+            <h2>
+                انگیزه
+            </h2>
+
+            <p>
+                برای روزهایی که نیاز داری
+                دوباره شروع کنی.
+            </p>
+
+            <button onclick="categoryQuote('motivation')">
+                🧠 یک جمله
+            </button>
+
+        </article>
+
+
+        <article class="quote-category">
+
+            <div>
+                🌙
+            </div>
+
+            <h2>
+                آرامش
+            </h2>
+
+            <p>
+                جمله‌هایی آرام برای
+                لحظه‌های خلوت و سکوت.
+            </p>
+
+            <button onclick="categoryQuote('peace')">
+                🌙 یک جمله
+            </button>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- بازگشت -->
+
+    <div class="quotes-back">
+
+        <a href="library.html"
+           class="back-btn">
+
+            📚 بازگشت به کتابخانه
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<script>
+
+    const quotes = {
+
+        hope: [
+
+            "بعد از هر شب تاریک، صبحی روشن خواهد آمد. 🌱",
+
+            "اگر امروز سخت است، به این معنی نیست که فردا هم سخت خواهد بود.",
+
+            "گاهی یک قدم کوچک، آغاز یک مسیر بزرگ است.",
+
+            "امید یعنی هنوز باور داشته باشی که می‌توانی دوباره شروع کنی."
+
+        ],
+
+
+        life: [
+
+            "زندگی فقط رسیدن به مقصد نیست؛ بخشی از زیبایی آن در مسیر است.",
+
+            "گاهی ساده‌ترین لحظه‌ها، زیباترین خاطره‌ها را می‌سازند.",
+
+            "هر روز فرصتی تازه برای بهتر زندگی کردن است.",
+
+            "قدر لحظه‌هایی را بدان که دیگر تکرار نمی‌شوند."
+
+        ],
+
+
+        motivation: [
+
+            "شروع کردن بهتر از کامل منتظر ماندن است.",
+
+            "اگر آهسته پیش می‌روی، باز هم در حال حرکت هستی.",
+
+            "اشتباه پایان راه نیست؛ بخشی از یاد گرفتن است.",
+
+            "به خودت فرصت بده تا چیزی را که امروز نمی‌توانی، فردا بتوانی."
+
+        ],
+
+
+        peace: [
+
+            "گاهی آرامش در پذیرفتن چیزهایی است که نمی‌توانیم تغییر دهیم.",
+
+            "آرام‌تر قدم بردار؛ زندگی مسابقه نیست.",
+
+            "دل آرام، حتی در میان سختی‌ها راه خود را پیدا می‌کند.",
+
+            "گاهی سکوت، زیباترین پاسخ است."
+
+        ]
+
+    };
+
+
+    let currentQuote = "";
+
+
+    function newQuote() {
+
+        const categories =
+            Object.keys(quotes);
+
+        const randomCategory =
+            categories[
+                Math.floor(
+                    Math.random() * categories.length
+                )
+            ];
+
+        categoryQuote(randomCategory);
+
+    }
+
+
+    function categoryQuote(category) {
+
+        const list =
+            quotes[category];
+
+        const randomIndex =
+            Math.floor(
+                Math.random() * list.length
+            );
+
+        currentQuote =
+            list[randomIndex];
+
+        document.getElementById("quoteText")
+            .textContent = currentQuote;
+
+        document.getElementById("quoteMessage")
+            .textContent = "";
+
+    }
+
+
+    function copyQuote() {
+
+        if (!currentQuote) {
+
+            document.getElementById("quoteMessage")
+                .textContent =
+                "اول یک جمله انتخاب کن ✨";
+
+            return;
+
+        }
+
+
+        navigator.clipboard.writeText(currentQuote)
+            .then(function () {
+
+                document.getElementById("quoteMessage")
+                    .textContent =
+                    "جمله کپی شد 📋❤️";
+
+            });
+
+    }
+
+
+    function favoriteQuote() {
+
+        if (!currentQuote) {
+
+            document.getElementById("quoteMessage")
+                .textContent =
+                "اول یک جمله انتخاب کن ✨";
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "shegeftaFavoriteQuote",
+            currentQuote
+        );
+
+
+        document.getElementById("quoteMessage")
+            .textContent =
+            "این جمله به علاقه‌مندی‌ها اضافه شد ❤️";
+
+    }
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body></html>
