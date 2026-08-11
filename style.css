@@ -1777,3 +1777,478 @@ transform: none !important;
 }
 
 }
+
+/* =========================================
+دانستنی‌های شگفتا
+استایل اختصاصی knowledge.html
+========================================= */
+
+.knowledge-page {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 70px 20px 60px;
+text-align: center;
+box-sizing: border-box;
+}
+
+/* آیکون بالای صفحه */
+
+.knowledge-icon {
+font-size: 58px;
+margin-bottom: 15px;
+animation: knowledgeFloat 3s ease-in-out infinite;
+}
+
+/* عنوان */
+
+.knowledge-page h1 {
+margin: 0;
+font-size: 38px;
+color: #6d4c41;
+font-weight: 800;
+}
+
+.knowledge-intro {
+margin: 15px auto 45px;
+max-width: 700px;
+font-size: 19px;
+line-height: 2;
+color: #777;
+}
+
+/* =========================================
+شبکه کارت‌ها
+========================================= */
+
+.knowledge-grid {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+margin: 0 auto;
+}
+
+/* =========================================
+کارت دانستنی
+========================================= */
+
+.knowledge-card {
+position: relative;
+min-height: 285px;
+padding: 30px 22px 25px;
+box-sizing: border-box;
+
+background:
+    linear-gradient(
+        145deg,
+        #fffdf8,
+        #f8efe4
+    );
+
+border: 1px solid #ead8c2;
+border-radius: 25px;
+
+box-shadow:
+    0 10px 30px rgba(109, 76, 65, 0.12);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+overflow: hidden;
+
+}
+
+/* نور تزئینی کارت */
+
+.knowledge-card::before {
+content: "";
+position: absolute;
+
+width: 120px;
+height: 120px;
+
+top: -55px;
+left: -55px;
+
+background: rgba(128, 203, 196, 0.18);
+
+border-radius: 50%;
+
+transition: transform 0.4s ease;
+
+}
+
+/* افکت هاور */
+
+.knowledge-card:hover {
+transform: translateY(-8px);
+
+box-shadow:
+    0 18px 40px rgba(109, 76, 65, 0.20);
+
+border-color: #80cbc4;
+
+}
+
+.knowledge-card:hover::before {
+transform: scale(1.5);
+}
+
+/* =========================================
+آیکون کارت
+========================================= */
+
+.knowledge-card-icon {
+position: relative;
+z-index: 1;
+
+width: 82px;
+height: 82px;
+
+margin: 0 auto 18px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 42px;
+
+background: #fffaf2;
+
+border: 3px solid #d7b98c;
+
+border-radius: 50%;
+
+box-shadow:
+    0 6px 18px rgba(109, 76, 65, 0.12);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+.knowledge-card:hover .knowledge-card-icon {
+transform: scale(1.08) rotate(-3deg);
+
+box-shadow:
+    0 8px 24px rgba(128, 203, 196, 0.30);
+
+}
+
+/* =========================================
+عنوان کارت
+========================================= */
+
+.knowledge-card h2 {
+position: relative;
+z-index: 1;
+
+margin: 0 0 12px;
+
+font-size: 23px;
+
+color: #6d4c41;
+
+font-weight: 800;
+
+}
+
+/* متن کارت */
+
+.knowledge-card p {
+position: relative;
+z-index: 1;
+
+margin: 0 auto 22px;
+
+max-width: 300px;
+
+font-size: 15px;
+
+line-height: 2;
+
+color: #777;
+
+}
+
+/* =========================================
+دکمه دانستنی
+========================================= */
+
+.knowledge-btn {
+position: relative;
+z-index: 2;
+
+border: none;
+
+padding: 11px 20px;
+
+border-radius: 30px;
+
+background:
+    linear-gradient(
+        135deg,
+        #8d6e63,
+        #6d4c41
+    );
+
+color: white;
+
+font-family: inherit;
+
+font-size: 14px;
+
+cursor: pointer;
+
+box-shadow:
+    0 6px 15px rgba(109, 76, 65, 0.22);
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+.knowledge-btn:hover {
+transform: translateY(-3px);
+
+box-shadow:
+    0 9px 20px rgba(109, 76, 65, 0.30);
+
+background:
+    linear-gradient(
+        135deg,
+        #26a69a,
+        #00897b
+    );
+
+}
+
+.knowledge-btn:active {
+transform: scale(0.96);
+}
+
+/* =========================================
+جعبه دانستنی امروز
+========================================= */
+
+.fact-box {
+position: relative;
+
+max-width: 900px;
+
+margin: 60px auto 0;
+
+padding: 40px 30px;
+
+box-sizing: border-box;
+
+background:
+    linear-gradient(
+        145deg,
+        #fffaf2,
+        #f1e7d8
+    );
+
+border: 2px solid #d7b98c;
+
+border-radius: 30px;
+
+box-shadow:
+    0 15px 40px rgba(109, 76, 65, 0.15);
+
+overflow: hidden;
+
+}
+
+/* تزئینات جعبه */
+
+.fact-box::before,
+.fact-box::after {
+content: "✦";
+
+position: absolute;
+
+font-size: 28px;
+
+color: #80cbc4;
+
+opacity: 0.7;
+
+}
+
+.fact-box::before {
+top: 15px;
+right: 25px;
+}
+
+.fact-box::after {
+bottom: 15px;
+left: 25px;
+}
+
+/* آیکون دانستنی */
+
+.fact-icon {
+font-size: 45px;
+
+margin-bottom: 10px;
+
+animation: knowledgeGlow 2.5s ease-in-out infinite;
+
+}
+
+/* عنوان دانستنی */
+
+.fact-box h2 {
+margin: 0 0 15px;
+
+color: #6d4c41;
+
+font-size: 27px;
+
+font-weight: 800;
+
+}
+
+/* متن دانستنی */
+
+#factText {
+margin: 0 auto;
+
+max-width: 750px;
+
+color: #555;
+
+font-size: 18px;
+
+line-height: 2.2;
+
+}
+
+/* =========================================
+دکمه بازگشت
+========================================= */
+
+.knowledge-back {
+margin-top: 45px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+/* =========================================
+انیمیشن‌ها
+========================================= */
+
+@keyframes knowledgeFloat {
+
+0%,
+100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-8px);
+}
+
+}
+
+@keyframes knowledgeGlow {
+
+0%,
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+
+50% {
+    transform: scale(1.08);
+    opacity: 0.75;
+}
+
+}
+
+/* =========================================
+موبایل
+========================================= */
+
+@media (max-width: 900px) {
+
+.knowledge-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.knowledge-page h1 {
+    font-size: 32px;
+}
+
+}
+
+/* =========================================
+موبایل کوچک
+========================================= */
+
+@media (max-width: 600px) {
+
+.knowledge-page {
+    padding: 50px 15px 45px;
+}
+
+.knowledge-icon {
+    font-size: 48px;
+}
+
+.knowledge-page h1 {
+    font-size: 28px;
+}
+
+.knowledge-intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.knowledge-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.knowledge-card {
+    min-height: auto;
+    padding: 28px 20px 25px;
+}
+
+.knowledge-card h2 {
+    font-size: 21px;
+}
+
+.knowledge-card p {
+    font-size: 14px;
+}
+
+.fact-box {
+    margin-top: 40px;
+    padding: 30px 20px;
+    border-radius: 25px;
+}
+
+.fact-box h2 {
+    font-size: 23px;
+}
+
+#factText {
+    font-size: 16px;
+    line-height: 2;
+}
+
+}
