@@ -347,26 +347,38 @@
     }
 
 
-    function categoryQuote(category) {
+   function categoryQuote(category) {
 
-        const list =
-            quotes[category];
+    let list;
 
-        const randomIndex =
-            Math.floor(
-                Math.random() * list.length
-            );
+    if (category === "all") {
 
-        currentQuote =
-            list[randomIndex];
+        list = [
+            ...quotes.channel,
+            ...quotes.shegefta
+        ];
 
-        document.getElementById("quoteText")
-            .textContent = currentQuote;
+    } else {
 
-        document.getElementById("quoteMessage")
-            .textContent = "";
+        list = quotes[category];
 
     }
+
+    const randomIndex =
+        Math.floor(
+            Math.random() * list.length
+        );
+
+    currentQuote =
+        list[randomIndex];
+
+    document.getElementById("quoteText")
+        .textContent = currentQuote;
+
+    document.getElementById("quoteMessage")
+        .textContent = "";
+
+} 
 
 
     function copyQuote() {
