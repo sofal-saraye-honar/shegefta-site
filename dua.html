@@ -3,139 +3,414 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>دعا و زیارت | شگفتا</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>دعا و زیارت | شگفتا</title>
 
-<title>دعا و زیارت | دعاهای آرامش‌بخش در شگفتا</title>
+    <meta name="description"
+          content="دعاها، ذکرها و متن‌های معنوی برای آرامش دل در شگفتا.">
 
-<meta name="description" content="مجموعه دعاهای آرامش‌بخش، زیارت‌ها و ذکرهای معنوی در سایت شگفتا؛ جایی برای آرامش دل و حال خوب.">
+    <link rel="stylesheet" href="style.css">
 
-<meta name="keywords" content="دعا، زیارت، دعای آرامش، ذکر، دعاهای روزانه، شگفتا">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://sofal-saraye-honar.github.io/shegefta-site/dua.html">
-
-
-<meta property="og:title" content="دعا و زیارت | شگفتا">
-
-<meta property="og:description" content="دعاهای آرامش‌بخش و ذکرهای زیبا برای آرامش دل در شگفتا">
-
-<meta property="og:type" content="article">
-
-<meta property="og:image" content="https://sofal-saraye-honar.github.io/shegefta-site/images/dua.jpg">
- 
 </head>
+
 
 <body>
 
-<header>
-
-<div class="logo">
-✨ شگفتا ✨
-</div>
-
-<h2 class="welcome-title">
-🌙 دعا و زیارت
-</h2>
-
-</header>
+<div id="stars-container"></div>
 
 
-<section class="welcome">
-
-<h2>
-🌿 دعاهای آرامش‌بخش
-</h2>
-
-<p>
-دعاها و ذکرهای زیبا برای آرامش دل و حال خوب
-</p>
-
-</section>
+<main class="dua-page">
 
 
-<section class="cards">
+    <!-- آیکن -->
+
+    <div class="dua-icon">
+        🤲✨
+    </div>
 
 
-<div class="card">
+    <!-- عنوان -->
 
-<div class="icon">
-🌸
-</div>
-
-<h2>
-دعای آرامش
-</h2>
-
-<p>
-خدایا دلم را آرام کن، قلبم را سرشار از امید و زندگی قرار بده.
-</p>
-
-</div>
- 
-<a href="tasbihat.html" class="card">
-
-<div class="icon">
-📿
-</div>
-
-<h2>
-تسبیحات حضرت زهرا (س)
-</h2>
-
-<p>
-آموزش، فضیلت‌ها، آثار و نحوه گفتن تسبیحات حضرت زهرا (س)
-</p>
-
-</a>
-
-<div class="card">
-
-<div class="icon">
-🕌
-</div>
-
-<h2>
-زیارت کوتاه
-</h2>
-
-<p>
-سلام بر بندگان شایسته خدا و اهل بیت پاک پیامبر.
-</p>
-
-</div>
- 
-<div class="card">
-
-<div class="icon">🌙</div>
-
-<h2>دعای امروز</h2>
-
-<p>
-هر روز یک دعای کوتاه برای آرامش دل و شروعی پر از امید.
-</p>
-
-<a href="today-dua.html">
-مطالعه دعا
-</a>
-
-</div>
-  
-</section>
+    <h1>
+        دعا و زیارت
+    </h1>
 
 
-<footer>
+    <p class="dua-intro">
+        گاهی یک دعا، آرامشی است که دل ما به آن نیاز دارد 🌙
+    </p>
 
-<p>
-© شگفتا | هر روز یک کشف تازه
-</p>
 
-</footer>
+    <!-- دسته‌بندی‌ها -->
+
+    <section class="dua-categories">
+
+
+        <!-- دعای امروز -->
+
+        <article class="dua-category">
+
+            <div class="dua-card-icon">
+                🌅
+            </div>
+
+            <h2>
+                دعای امروز
+            </h2>
+
+            <p>
+                دعایی برای شروع روز با امید،
+                آرامش و توکل.
+            </p>
+
+            <button
+                onclick="showDua('today')">
+
+                🌿 دعای امروز
+
+            </button>
+
+        </article>
+
+
+        <!-- دعای آرامش -->
+
+        <article class="dua-category">
+
+            <div class="dua-card-icon">
+                🌙
+            </div>
+
+            <h2>
+                دعای آرامش
+            </h2>
+
+            <p>
+                برای لحظه‌هایی که دل
+                به آرامش بیشتری نیاز دارد.
+            </p>
+
+            <button
+                onclick="showDua('peace')">
+
+                🕊️ یک دعا
+
+            </button>
+
+        </article>
+
+
+        <!-- دعای خانواده -->
+
+        <article class="dua-category">
+
+            <div class="dua-card-icon">
+                ❤️
+            </div>
+
+            <h2>
+                دعای خانواده
+            </h2>
+
+            <p>
+                برای سلامتی و آرامش
+                عزیزانمان.
+            </p>
+
+            <button
+                onclick="showDua('family')">
+
+                ❤️ یک دعا
+
+            </button>
+
+        </article>
+
+
+        <!-- ذکر -->
+
+        <article class="dua-category">
+
+            <div class="dua-card-icon">
+                📿
+            </div>
+
+            <h2>
+                ذکر و یاد خدا
+            </h2>
+
+            <p>
+                ذکرهایی کوتاه برای
+                لحظه‌های مختلف روز.
+            </p>
+
+            <button
+                onclick="showDua('zekr')">
+
+                📿 یک ذکر
+
+            </button>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- نتیجه دعا -->
+
+    <section
+        class="dua-result"
+        id="duaResult">
+
+
+        <div class="dua-result-icon">
+            🤲
+        </div>
+
+
+        <h2 id="duaTitle">
+            دعای امروز
+        </h2>
+
+
+        <p
+            class="dua-text"
+            id="duaText">
+        </p>
+
+
+        <button
+            class="dua-copy-btn"
+            onclick="copyDua()">
+
+            📋 کپی دعا
+
+        </button>
+
+
+        <div
+            class="dua-message"
+            id="duaMessage">
+        </div>
+
+
+    </section>
+
+
+    <!-- بازگشت -->
+
+    <div class="dua-back">
+
+        <a
+            href="library.html"
+            class="back-btn">
+
+            📚 بازگشت به کتابخانه
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<script>
+
+
+/* =====================================
+   دعاها
+===================================== */
+
+
+const duas = {
+
+
+    today: [
+
+        "خدایا امروز را برای ما روزی پر از آرامش، سلامتی، خیر و برکت قرار بده. دل‌هایمان را از نگرانی خالی و زندگی‌مان را از نور امید پر کن. 🤲",
+
+        "خدای مهربان، امروز را آغاز یک اتفاق خوب قرار بده و درهای رحمت، آرامش و موفقیت را به روی ما باز کن. 🌱",
+
+        "خدایا کمکمان کن امروز بهتر از دیروز باشیم، دل کسی را نشکنیم و با قلبی آرام قدم برداریم. ❤️"
+
+    ],
+
+
+    peace: [
+
+        "خدایا دل ما را آرام کن و به ما توان پذیرفتن چیزهایی را بده که نمی‌توانیم تغییر دهیم. 🤲",
+
+        "پروردگارا، نگرانی‌های ما را به آرامش، ترس‌هایمان را به امید و سختی‌هایمان را به گشایش تبدیل کن. 🌙",
+
+        "خدایا در میان شلوغی‌های زندگی، آرامشی به ما بده که هیچ اتفاقی نتواند آن را از ما بگیرد. 🕊️"
+
+    ],
+
+
+    family: [
+
+        "خدایا خانواده‌ام را در پناه خودت حفظ کن، به آنها سلامتی، آرامش، شادی و عاقبت‌به‌خیری عطا کن. ❤️",
+
+        "پروردگارا، سایه عزیزانمان را بر سرمان حفظ کن و خانه‌هایمان را از محبت و آرامش پر کن. 🤲",
+
+        "خدایا هر جا که عزیزانم هستند، خودت مراقبشان باش و دلشان را از غم و نگرانی دور کن. 🌷"
+
+    ],
+
+
+    zekr: [
+
+        "سُبْحَانَ اللَّهِ وَ بِحَمْدِهِ 🌿",
+
+        "اَسْتَغْفِرُ اللَّهَ رَبِّی وَ اَتُوبُ إِلَیْهِ 🤲",
+
+        "حَسْبِیَ اللَّهُ وَ نِعْمَ الْوَکِیلُ 🕊️",
+
+        "یَا حَیُّ یَا قَیُّومُ بِرَحْمَتِکَ أَسْتَغِیثُ 🌙",
+
+        "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَ آلِ مُحَمَّدٍ ❤️"
+
+    ]
+
+};
+
+
+
+let currentDua = "";
+
+
+
+/* =====================================
+   نمایش دعا
+===================================== */
+
+
+function showDua(category) {
+
+
+    const list =
+        duas[category];
+
+
+    const randomIndex =
+        Math.floor(
+            Math.random() * list.length
+        );
+
+
+    currentDua =
+        list[randomIndex];
+
+
+    let title = "دعای امروز";
+
+
+    if (category === "peace") {
+
+        title = "دعای آرامش";
+
+    }
+
+
+    if (category === "family") {
+
+        title = "دعای خانواده";
+
+    }
+
+
+    if (category === "zekr") {
+
+        title = "ذکر و یاد خدا";
+
+    }
+
+
+    document.getElementById("duaTitle")
+        .textContent =
+        title;
+
+
+    document.getElementById("duaText")
+        .textContent =
+        currentDua;
+
+
+    document.getElementById("duaMessage")
+        .textContent =
+        "";
+
+
+    document.getElementById("duaResult")
+        .style.display =
+        "block";
+
+
+    document.getElementById("duaResult")
+        .scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+}
+
+
+
+/* =====================================
+   کپی دعا
+===================================== */
+
+
+function copyDua() {
+
+
+    if (!currentDua) {
+
+        document.getElementById("duaMessage")
+            .textContent =
+            "اول یک دعا انتخاب کن 🤲";
+
+        return;
+
+    }
+
+
+    navigator.clipboard
+        .writeText(currentDua)
+
+        .then(function () {
+
+            document.getElementById("duaMessage")
+                .textContent =
+                "دعا کپی شد 📋❤️";
+
+        })
+
+        .catch(function () {
+
+            document.getElementById("duaMessage")
+                .textContent =
+                "کپی خودکار انجام نشد؛ متن را لمس و کپی کن. 🌿";
+
+        });
+
+}
+
+
+</script>
+
+
+<script src="script.js"></script>
 
 
 </body>
