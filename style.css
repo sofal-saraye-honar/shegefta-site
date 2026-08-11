@@ -2797,3 +2797,282 @@ align-items: center;
 }
 
 }
+
+/* =========================================
+   فال حافظ | شگفتا
+   ========================================= */
+
+.hafez-page {
+    min-height: 100vh;
+    padding: 70px 20px;
+    text-align: center;
+    background:
+        radial-gradient(circle at top, rgba(218, 190, 130, 0.18), transparent 40%),
+        linear-gradient(180deg, #fffaf1, #f7eee0);
+}
+
+
+/* آیکن بالای صفحه */
+
+.hafez-icon {
+    font-size: 58px;
+    margin-bottom: 10px;
+    animation: hafezGlow 2.5s infinite alternate;
+}
+
+
+/* عنوان */
+
+.hafez-page h1 {
+    margin: 0;
+    font-size: 38px;
+    color: #654b3b;
+    text-shadow: 0 2px 8px rgba(101, 75, 59, 0.15);
+}
+
+
+.hafez-intro {
+    margin: 15px auto 35px;
+    max-width: 650px;
+    color: #806f63;
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+/* کارت فال */
+
+.hafez-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    background: rgba(255, 253, 247, 0.95);
+    border: 3px solid #d8b98a;
+    border-radius: 28px;
+    box-shadow:
+        0 15px 40px rgba(91, 65, 45, 0.15),
+        inset 0 0 25px rgba(216, 185, 138, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* تزئین گوشه‌ها */
+
+.hafez-card::before,
+.hafez-card::after {
+    content: "✦";
+    position: absolute;
+    font-size: 28px;
+    color: #b58b57;
+    opacity: 0.7;
+}
+
+.hafez-card::before {
+    top: 15px;
+    right: 20px;
+}
+
+.hafez-card::after {
+    bottom: 15px;
+    left: 20px;
+}
+
+
+/* عنوان داخل کارت */
+
+.hafez-card h2 {
+    margin-bottom: 25px;
+    color: #76543f;
+    font-size: 26px;
+}
+
+
+/* نیت */
+
+.hafez-niyat {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+
+.hafez-niyat label {
+    display: block;
+    margin-bottom: 10px;
+    color: #6b5547;
+    font-weight: bold;
+}
+
+
+.hafez-niyat input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    border: 2px solid #ddc8a9;
+    border-radius: 14px;
+    background: #fffdf8;
+    color: #554236;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.hafez-niyat input:focus {
+    border-color: #a67c52;
+    box-shadow: 0 0 12px rgba(166, 124, 82, 0.18);
+}
+
+
+/* دکمه فال */
+
+.hafez-btn {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #8b6b4f, #b28a61);
+    color: white;
+    font-family: inherit;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(91, 65, 45, 0.2);
+    transition: 0.3s;
+}
+
+
+.hafez-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(91, 65, 45, 0.28);
+}
+
+
+/* نتیجه فال */
+
+.hafez-result {
+    display: none;
+    margin-top: 35px;
+    padding: 30px 25px;
+    background: #fffaf0;
+    border: 2px solid #e0c79f;
+    border-radius: 22px;
+    animation: hafezAppear 0.7s ease;
+}
+
+
+/* غزل */
+
+.hafez-ghazal {
+    color: #503d32;
+    font-size: 20px;
+    line-height: 2.5;
+    white-space: pre-line;
+}
+
+
+/* معنی */
+
+.hafez-meaning {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(216, 185, 138, 0.13);
+    color: #6c594d;
+    line-height: 2.2;
+    font-size: 16px;
+}
+
+
+/* پیام فال */
+
+.hafez-message {
+    margin-top: 20px;
+    color: #8b6b4f;
+    font-size: 16px;
+    line-height: 2;
+}
+
+
+/* دکمه دوباره */
+
+.hafez-again {
+    margin-top: 25px;
+}
+
+
+/* دکمه بازگشت */
+
+.hafez-back {
+    margin-top: 40px;
+}
+
+
+/* انیمیشن نور */
+
+@keyframes hafezGlow {
+
+    from {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    to {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
+
+
+/* انیمیشن نمایش نتیجه */
+
+@keyframes hafezAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* موبایل */
+
+@media (max-width: 600px) {
+
+    .hafez-page {
+        padding: 45px 15px;
+    }
+
+    .hafez-page h1 {
+        font-size: 30px;
+    }
+
+    .hafez-intro {
+        font-size: 16px;
+    }
+
+    .hafez-card {
+        padding: 35px 18px;
+        border-radius: 22px;
+    }
+
+    .hafez-card h2 {
+        font-size: 22px;
+    }
+
+    .hafez-ghazal {
+        font-size: 18px;
+        line-height: 2.3;
+    }
+
+    .hafez-btn {
+        width: 100%;
+    }
+
+}
