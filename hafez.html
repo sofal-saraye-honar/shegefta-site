@@ -3,152 +3,467 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>فال حافظ آنلاین با معنی و تفسیر | شگفتا</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="فال حافظ آنلاین در شگفتا؛ نیت کنید و فال حافظ بگیرید همراه با معنی و تفسیر اشعار حافظ.">
+    <title>فال حافظ | شگفتا</title>
 
-<meta name="keywords" content="فال حافظ, فال حافظ آنلاین, غزل حافظ, تفسیر فال حافظ, شگفتا">
+    <meta name="description"
+          content="فال حافظ با نیت شما در شگفتا؛ غزل، معنی و پیام فال.">
 
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://sofal-saraye-honar.github.io/shegefta-site/hafez.html">
-
-<meta property="og:title" content="فال حافظ آنلاین | شگفتا">
-
-<meta property="og:description" content="فال حافظ همراه با معنی و تفسیر در سایت شگفتا">
-
-<meta property="og:type" content="article">
-
-<meta property="og:image" content="https://sofal-saraye-honar.github.io/shegefta-site/images/hafez.jpg">
-
- <meta property="og:url" content="https://sofal-saraye-honar.github.io/shegefta-site/hafez.html">
-
-<meta name="twitter:card" content="summary_large_image">
-  
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
 
-<header>
-
-<div class="logo">
-✨ شگفتا ✨
-</div>
-
-<h2 class="welcome-title">
-📖 فال حافظ
-</h2>
-
-</header>
+<!-- ستاره‌های پس‌زمینه -->
+<div id="stars-container"></div>
 
 
-<section class="welcome">
-
-<h2>
-🌹 فال حافظ آنلاین
-</h2>
-
-<p>
-نیت کن، دل آرام کن و فال حافظ خود را در شگفتا دریافت کن.
-</p>
-
-</section>
-
-<section class="hafez-box">
-
-<div class="icon">
-📖🌹
-</div>
-
-<h2>
-فال حافظ
-</h2>
-
-<p>
-نیت کن و روی کتاب کلیک کن تا فال حافظ خود را ببینی.
-</p> 
- 
-<div class="hafez-book" onclick="getHafez()">
-
-📖🌹
-
-<p>
-برای گرفتن فال<br>
-روی کتاب کلیک کنید
-</p>
-
-</div>
-
-<div id="hafez-result">
-🌹 نیت کن و روی کتاب کلیک کن...
-</div>
-
-</section>
-
-<div class="back-center">
-
-<a href="index.html" class="back-btn">
-⬅️ بازگشت به صفحه اصلی
-</a>
-
-</div>
+<main class="hafez-page">
 
 
-<footer>
+    <!-- آیکن -->
 
-<p>
-© شگفتا | هر روز یک کشف تازه
-</p>
+    <div class="hafez-icon">
+        📖✨
+    </div>
 
-</footer>
+
+    <!-- عنوان -->
+
+    <h1>
+        فال حافظ
+    </h1>
+
+
+    <p class="hafez-intro">
+        نیت کن، دلت را آرام کن و با عشق یک فال بگیر 🌿
+    </p>
+
+
+    <!-- کارت فال -->
+
+    <section class="hafez-card">
+
+        <h2>
+            🌹 نیت خود را در دل کن
+        </h2>
+
+
+        <!-- نیت -->
+
+        <div class="hafez-niyat">
+
+            <label for="niyat">
+                اگر دوست داری نیتت را بنویس:
+            </label>
+
+            <input
+                type="text"
+                id="niyat"
+                placeholder="نیت خود را اینجا بنویس..."
+                maxlength="150"
+            >
+
+        </div>
+
+
+        <!-- دکمه فال -->
+
+        <button
+            class="hafez-btn"
+            onclick="takeHafez()">
+
+            🔮 گرفتن فال حافظ
+
+        </button>
+
+
+        <!-- نتیجه -->
+
+        <div
+            class="hafez-result"
+            id="hafezResult">
+
+
+            <!-- شماره غزل -->
+
+            <div
+                class="hafez-message"
+                id="hafezNumber">
+            </div>
+
+
+            <!-- غزل -->
+
+            <div
+                class="hafez-ghazal"
+                id="hafezGhazal">
+            </div>
+
+
+            <!-- معنی -->
+
+            <div
+                class="hafez-meaning"
+                id="hafezMeaning">
+            </div>
+
+
+            <!-- پیام -->
+
+            <div
+                class="hafez-message"
+                id="hafezMessage">
+            </div>
+
+
+            <!-- دوباره -->
+
+            <div class="hafez-again">
+
+                <button
+                    class="hafez-btn"
+                    onclick="takeHafez()">
+
+                    🔄 فال دوباره
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- بازگشت -->
+
+    <div class="hafez-back">
+
+        <a
+            href="library.html"
+            class="back-btn">
+
+            📚 بازگشت به کتابخانه
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
 
 <script>
 
-const hafez = [
+/* =====================================================
+   فال‌های حافظ
+   ===================================================== */
 
-{
-poem:"الا یا ایها الساقی ادر کاساً و ناولها<br>که عشق آسان نمود اول ولی افتاد مشکل‌ها",
-meaning:"این فال نشان می‌دهد با صبر و امید، سختی‌ها آسان می‌شوند و نتیجه خوبی در انتظار شماست."
-},
 
-{
-poem:"دوش دیدم که ملائک در میخانه زدند<br>گل آدم بسرشتند و به پیمانه زدند",
-meaning:"نشانه تغییر مثبت و شروع یک مسیر تازه در زندگی است."
-},
+const hafezFal = [
 
-{
-poem:"صبح است ساقیا قدحی پر شراب کن<br>دور فلک درنگ ندارد شتاب کن",
-meaning:"فرصت‌ها را از دست نده و با امید برای آینده قدم بردار."
-}
+    {
+        number: "غزل ۱",
+
+        ghazal:
+`الا یا ایها الساقی ادر کاساً و ناولها
+که عشق آسان نمود اول ولی افتاد مشکل‌ها
+
+به بوی نافه‌ای کاخر صبا زان طره بگشاید
+ز تاب جعد مشکینش چه خون افتاد در دل‌ها`,
+
+        meaning:
+`این فال از شروع یک مسیر تازه و پرشور خبر می‌دهد. راهی که در پیش داری ممکن است در ابتدا آسان به نظر برسد، اما برای رسیدن به نتیجه باید صبر و پشتکار داشته باشی.`,
+
+        message:
+`🌹 نیتت را با امید دنبال کن؛ عجله نکن و اجازه بده زمان نتیجه خودش را نشان دهد.`
+    },
+
+
+    {
+        number: "غزل ۲",
+
+        ghazal:
+`دوش دیدم که ملائک در میخانه زدند
+گل آدم بسرشتند و به پیمانه زدند
+
+ساکنان حرم ستر و عفاف ملکوت
+با من راه‌نشین باده مستانه زدند`,
+
+        meaning:
+`این فال می‌تواند نشانه یک اتفاق غیرمنتظره و مبارک باشد. گاهی چیزی که فکر می‌کنی دور از دسترس است، از راهی می‌رسد که انتظارش را نداری.`,
+
+        message:
+`✨ به نشانه‌های خوب زندگی توجه کن و فرصت‌های تازه را از دست نده.`
+    },
+
+
+    {
+        number: "غزل ۳",
+
+        ghazal:
+`اگر آن ترک شیرازی به دست آرد دل ما را
+به خال هندویش بخشم سمرقند و بخارا را
+
+بده ساقی می باقی که در جنت نخواهی یافت
+کنار آب رکن‌آباد و گلگشت مصلا را`,
+
+        meaning:
+`این فال نشانه دل‌بستگی، عشق و ارزش دادن به چیزهای مهم زندگی است. چیزی که برایت ارزشمند است ممکن است نیاز به توجه و مراقبت بیشتری داشته باشد.`,
+
+        message:
+`❤️ قدر آدم‌ها و لحظه‌های ارزشمند زندگی‌ات را بیشتر بدان.`
+    },
+
+
+    {
+        number: "غزل ۴",
+
+        ghazal:
+`صبا به لطف بگو آن غزال رعنا را
+که سر به کوه و بیابان تو داده‌ای ما را
+
+شکرفروش که عمرش دراز باد چرا
+تفقدی نکند طوطی شکرخا را`,
+
+        meaning:
+`خبر یا پیامی که مدت‌ها منتظرش بوده‌ای ممکن است به تو برسد. این فال از امید و انتظار همراه با صبر سخن می‌گوید.`,
+
+        message:
+`🌱 چیزی که منتظرش هستی ممکن است نزدیک‌تر از آن باشد که فکر می‌کنی.`
+    },
+
+
+    {
+        number: "غزل ۵",
+
+        ghazal:
+`دل می‌رود ز دستم صاحبدلان خدا را
+دردا که راز پنهان خواهد شد آشکارا
+
+کشتی شکستگانیم ای باد شرطه برخیز
+باشد که بازبینیم دیدار آشنا را`,
+
+        meaning:
+`این فال می‌گوید نگرانی‌ها و آشفتگی‌های فعلی همیشگی نیستند. با کمک گرفتن از افراد درست و حفظ امید می‌توانی دوباره آرامش پیدا کنی.`,
+
+        message:
+`🌙 دل نگران نباش؛ بعد از سختی، دوباره فرصت آرامش و دیدار خواهد رسید.`
+    },
+
+
+    {
+        number: "غزل ۶",
+
+        ghazal:
+`به ملازمان سلطان که رساند این دعا را
+که به شکر پادشاهی ز نظر مران گدا را
+
+به دعای خیر مردم دل خویش شاد گردان
+که دعای نیک مردم نرود ز دل خدا را`,
+
+        meaning:
+`این فال بر ارزش دعا، نیکی و حمایت دیگران تأکید دارد. کار خیر و رفتار درست در نهایت اثر خودش را نشان خواهد داد.`,
+
+        message:
+`🙏 نیکی کن، حتی اگر کسی آن را نبیند؛ خوبی بی‌پاسخ نمی‌ماند.`
+    },
+
+
+    {
+        number: "غزل ۷",
+
+        ghazal:
+`سال‌ها دل طلب جام جم از ما می‌کرد
+وان چه خود داشت ز بیگانه تمنا می‌کرد
+
+بی‌دلی در همه احوال خدا با او بود
+او نمی‌دیدش و از دور خدایا می‌کرد`,
+
+        meaning:
+`گاهی چیزی را که به دنبالش هستیم در وجود خودمان داریم. این فال تو را دعوت می‌کند بیشتر به توانایی‌ها و داشته‌های خودت اعتماد کنی.`,
+
+        message:
+`🕊️ جواب بعضی سؤال‌ها بیرون از تو نیست؛ کمی به خودت و توانایی‌هایت نگاه کن.`
+    },
+
+
+    {
+        number: "غزل ۸",
+
+        ghazal:
+`دوش وقت سحر از غصه نجاتم دادند
+واندر آن ظلمت شب آب حیاتم دادند
+
+بیخود از شعشعه پرتو ذاتم کردند
+باده از جام تجلی صفاتم دادند`,
+
+        meaning:
+`این فال نشانه گشایش بعد از سختی است. ممکن است شرایطی که اکنون سنگین به نظر می‌رسد، به‌زودی تغییر کند.`,
+
+        message:
+`🌅 امیدت را حفظ کن؛ گاهی درست بعد از تاریک‌ترین لحظه، راه روشن می‌شود.`
+    },
+
+
+    {
+        number: "غزل ۹",
+
+        ghazal:
+`رواق منظر چشم من آشیانه توست
+کرم نما و فرود آ که خانه خانه توست
+
+به لطف خویش بخوانم که بنده خویشم
+به شرط آن که نگویی که این فسانه توست`,
+
+        meaning:
+`این فال از آرامش، محبت و اعتماد سخن می‌گوید. رابطه‌ای که بر پایه احترام و صداقت باشد می‌تواند ماندگار شود.`,
+
+        message:
+`💚 صداقت و مهربانی را فراموش نکن؛ دل‌های آرام با محبت ساخته می‌شوند.`
+    },
+
+
+    {
+        number: "غزل ۱۰",
+
+        ghazal:
+`هر آن که جانب اهل خدا نگه دارد
+خداش در همه حال از بلا نگه دارد
+
+حدیث دوست نگویم مگر به حضرت دوست
+که آشنا سخن آشنا نگه دارد`,
+
+        meaning:
+`این فال تو را به حفظ ارتباط با انسان‌های درست و دوری از افراد آسیب‌زننده دعوت می‌کند. انتخاب اطرافیان در آرامش آینده تو تأثیر زیادی دارد.`,
+
+        message:
+`🌿 آدم‌های خوب زندگی‌ات را قدر بدان و از دل خودت مراقبت کن.`
+    }
 
 ];
 
 
-function getHafez(){
 
- let book = document.querySelector(".hafez-book");
+/* =====================================================
+   گرفتن فال
+   ===================================================== */
 
-book.classList.add("rotate");
-let random = Math.floor(Math.random() * hafez.length);
 
-document.getElementById("hafez-result").innerHTML =
+function takeHafez() {
 
-"<h3>🌹 غزل حافظ</h3>" +
-"<p>" + hafez[random].poem + "</p>" +
-"<h3>✨ تفسیر</h3>" +
-"<p>" + hafez[random].meaning + "</p>";
-setTimeout(function(){
-book.classList.remove("rotate");
-},1000);
+
+    const niyat =
+        document.getElementById("niyat").value.trim();
+
+
+    /*
+       انتخاب تصادفی غزل
+    */
+
+    const randomIndex =
+        Math.floor(
+            Math.random() * hafezFal.length
+        );
+
+
+    const fal =
+        hafezFal[randomIndex];
+
+
+    /*
+       نمایش شماره غزل
+    */
+
+    document.getElementById("hafezNumber")
+        .textContent =
+        fal.number;
+
+
+    /*
+       نمایش غزل
+    */
+
+    document.getElementById("hafezGhazal")
+        .textContent =
+        fal.ghazal;
+
+
+    /*
+       نمایش معنی
+    */
+
+    document.getElementById("hafezMeaning")
+        .textContent =
+        "📖 معنی فال: " + fal.meaning;
+
+
+    /*
+       نمایش پیام
+    */
+
+    let message =
+        fal.message;
+
+
+    /*
+       اگر کاربر نیت نوشته باشد،
+       پیام شخصی‌تر نمایش داده می‌شود.
+    */
+
+    if (niyat) {
+
+        message =
+            "🌹 نیت تو: «" +
+            niyat +
+            "»\n\n" +
+            fal.message;
+
+    }
+
+
+    document.getElementById("hafezMessage")
+        .textContent =
+        message;
+
+
+    /*
+       نمایش کارت نتیجه
+    */
+
+    document.getElementById("hafezResult")
+        .style.display =
+        "block";
+
+
+    /*
+       اسکرول نرم به نتیجه
+    */
+
+    document.getElementById("hafezResult")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
 }
 
 </script>
+
+
+<!-- اسکریپت اصلی سایت -->
+
+<script src="script.js"></script>
+
 
 </body>
 
