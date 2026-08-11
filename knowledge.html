@@ -1,153 +1,358 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8">
 
-<head>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دانستنی‌های شگفتا | هر روز یک کشف تازه</title>
 
-<title>دانستنی‌های جالب و شگفت‌انگیز | شگفتا</title>
-
-<meta name="description" content="دانستنی‌های جالب، عجایب جهان، اطلاعات علمی و مطالب شگفت‌انگیز در سایت شگفتا.">
-
-<meta name="keywords" content="دانستنی, دانستنی های جالب, عجایب جهان, اطلاعات عمومی, شگفتا">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://sofal-saraye-honar.github.io/shegefta-site/knowledge.html">
+<meta name="description"
+      content="دانستنی‌های جالب و شگفت‌انگیز درباره علم، طبیعت، حیوانات، فضا، بدن انسان و فناوری در شگفتا.">
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+</head><body><!-- ستاره‌های پس‌زمینه -->
+<div id="stars-container"></div>
 
 
-<body>
+<main class="knowledge-page">
+
+    <!-- =========================
+         عنوان صفحه
+    ========================== -->
+
+    <div class="knowledge-icon">
+        🤯✨
+    </div>
+
+    <h1>
+        دانستنی‌های شگفتا
+    </h1>
+
+    <p class="knowledge-intro">
+        هر روز یک کشف تازه؛
+        چیزهایی که شاید نمی‌دانستی! 🌱
+    </p>
 
 
-<header>
+    <!-- =========================
+         کارت‌های موضوعی
+    ========================== -->
 
-<div class="logo">
-✨ شگفتا ✨
-</div>
-
-<h2 class="welcome-title">
-🌎 دانستنی‌های جالب
-</h2>
-
-</header>
+    <section class="knowledge-grid">
 
 
-<section class="welcome">
+        <!-- فضا -->
+        <article class="knowledge-card">
 
-<h2>
-🌱 هر روز یک کشف تازه
-</h2>
+            <div class="knowledge-card-icon">
+                🌌🚀
+            </div>
 
-<p>
-اینجا مطالب جالب و شگفت‌انگیز درباره جهان، طبیعت، علم و زندگی را می‌خوانید.
-</p>
+            <h2>
+                فضا و نجوم
+            </h2>
 
-</section>
+            <p>
+                از سیاره‌ها، ستاره‌ها و کهکشان‌ها
+                تا رازهای شگفت‌انگیز جهان.
+            </p>
 
+            <button class="knowledge-btn"
+                    onclick="showFact('space')">
 
+                🔭 یک دانستنی بگو
 
-<section class="cards">
+            </button>
 
-
-<div class="card">
-
-<div class="icon">
-🌍
-</div>
-
-<h2>
-زمین شگفت‌انگیز
-</h2>
-
-<p>
-زمین تنها سیاره شناخته شده‌ای است که در آن زندگی وجود دارد و بیش از ۷۰ درصد سطح آن را آب پوشانده است.
-</p>
-
-</div>
+        </article>
 
 
+        <!-- حیوانات -->
+        <article class="knowledge-card">
 
-<div class="card">
+            <div class="knowledge-card-icon">
+                🐾🦁
+            </div>
 
-<div class="icon">
-🐝
-</div>
+            <h2>
+                دنیای حیوانات
+            </h2>
 
-<h2>
-راز زنبورها
-</h2>
+            <p>
+                با رفتارها و توانایی‌های عجیب
+                حیوانات بیشتر آشنا شو.
+            </p>
 
-<p>
-زنبورها برای پیدا کردن مسیر کندوی خود از رقص مخصوص استفاده می‌کنند.
-</p>
+            <button class="knowledge-btn"
+                    onclick="showFact('animals')">
 
-</div>
+                🐾 یک دانستنی بگو
 
+            </button>
 
-
-<div class="card">
-
-<div class="icon">
-🌳
-</div>
-
-<h2>
-قدرت درختان
-</h2>
-
-<p>
-برخی درختان هزاران سال عمر می‌کنند و داستان‌های زیادی از گذشته زمین را در خود دارند.
-</p>
-
-</div>
+        </article>
 
 
+        <!-- بدن انسان -->
+        <article class="knowledge-card">
 
-<div class="card">
+            <div class="knowledge-card-icon">
+                🧠❤️
+            </div>
 
-<div class="icon">
-🧠
-</div>
+            <h2>
+                بدن انسان
+            </h2>
 
-<h2>
-مغز انسان
-</h2>
+            <p>
+                درباره مغز، قلب، بدن و
+                شگفتی‌های وجود انسان بیشتر بدان.
+            </p>
 
-<p>
-مغز انسان یکی از پیچیده‌ترین ساختارهای شناخته شده در جهان است.
-</p>
+            <button class="knowledge-btn"
+                    onclick="showFact('body')">
 
-</div>
+                🧠 یک دانستنی بگو
 
+            </button>
 
-</section>
-
-
-
-<div class="back-center">
-
-<a href="index.html" class="back-btn">
-⬅️ بازگشت به صفحه اصلی
-</a>
-
-</div>
+        </article>
 
 
+        <!-- طبیعت -->
+        <article class="knowledge-card">
 
-<footer>
+            <div class="knowledge-card-icon">
+                🌳🌊
+            </div>
 
-<p>
-© شگفتا | هر روز یک کشف تازه
-</p>
+            <h2>
+                طبیعت و زمین
+            </h2>
 
-</footer>
+            <p>
+                از اقیانوس‌ها و کوه‌ها تا
+                پدیده‌های عجیب طبیعت.
+            </p>
+
+            <button class="knowledge-btn"
+                    onclick="showFact('nature')">
+
+                🌍 یک دانستنی بگو
+
+            </button>
+
+        </article>
 
 
-</body>
+        <!-- علم -->
+        <article class="knowledge-card">
 
-</html>
+            <div class="knowledge-card-icon">
+                🔬⚗️
+            </div>
+
+            <h2>
+                علم و کشف
+            </h2>
+
+            <p>
+                دانستنی‌های ساده و جذاب
+                درباره علم و دنیای اطرافمان.
+            </p>
+
+            <button class="knowledge-btn"
+                    onclick="showFact('science')">
+
+                🔬 یک دانستنی بگو
+
+            </button>
+
+        </article>
+
+
+        <!-- فناوری -->
+        <article class="knowledge-card">
+
+            <div class="knowledge-card-icon">
+                💻🤖
+            </div>
+
+            <h2>
+                فناوری
+            </h2>
+
+            <p>
+                از کامپیوتر و اینترنت تا
+                هوش مصنوعی و فناوری‌های جدید.
+            </p>
+
+            <button class="knowledge-btn"
+                    onclick="showFact('technology')">
+
+                💡 یک دانستنی بگو
+
+            </button>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- =========================
+         نمایش دانستنی
+    ========================== -->
+
+    <section class="fact-box"
+             id="factBox">
+
+        <div class="fact-icon">
+            ✨
+        </div>
+
+        <h2>
+            دانستنی امروز
+        </h2>
+
+        <p id="factText">
+            روی یکی از دکمه‌ها بزن
+            تا یک دانستنی شگفت‌انگیز ببینی! 🌱
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         بازگشت به کتابخانه
+    ========================== -->
+
+    <div class="knowledge-back">
+
+        <a href="library.html"
+           class="back-btn">
+
+            📚 بازگشت به کتابخانه
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     JavaScript
+========================== -->
+
+<script>
+
+    const facts = {
+
+        space: [
+
+            "نور خورشید حدود ۸ دقیقه و ۲۰ ثانیه طول می‌کشد تا به زمین برسد. ☀️",
+
+            "مشتری بزرگ‌ترین سیاره منظومه شمسی است. 🪐",
+
+            "در فضا صدا مانند روی زمین به شکل معمول منتشر نمی‌شود، چون محیط کافی برای انتقال آن وجود ندارد. 🌌",
+
+            "ماه هر سال مقدار بسیار کمی از زمین دورتر می‌شود. 🌙"
+
+        ],
+
+
+        animals: [
+
+            "اختاپوس سه قلب دارد. 🐙",
+
+            "زرافه‌ها با وجود گردن بلند، تعداد مهره‌های گردنشان معمولاً هفت عدد است؛ درست مانند انسان. 🦒",
+
+            "خفاش‌ها تنها پستاندارانی هستند که توانایی پرواز واقعی دارند. 🦇",
+
+            "نهنگ آبی بزرگ‌ترین جانور شناخته‌شده روی زمین است. 🐋"
+
+        ],
+
+
+        body: [
+
+            "قلب انسان در طول روز هزاران بار می‌تپد و خون را در سراسر بدن به گردش درمی‌آورد. ❤️",
+
+            "مغز انسان بخش بسیار مهمی از انرژی بدن را مصرف می‌کند، حتی زمانی که بدن در حال استراحت است. 🧠",
+
+            "پوست بزرگ‌ترین اندام بدن انسان است. 🌱",
+
+            "استخوان‌ها با وجود ظاهر سختشان، بافت زنده هستند و دائماً در حال بازسازی‌اند. 🦴"
+
+        ],
+
+
+        nature: [
+
+            "اقیانوس‌ها بخش بزرگی از سطح زمین را پوشانده‌اند و نقش مهمی در تنظیم آب‌وهوا دارند. 🌊",
+
+            "برخی درختان می‌توانند صدها و حتی هزاران سال عمر کنند. 🌳",
+
+            "رعدوبرق می‌تواند دمای بسیار بالایی در مسیر خود ایجاد کند. ⚡",
+
+            "رنگین‌کمان زمانی شکل می‌گیرد که نور با قطرات آب برهم‌کنش کند. 🌈"
+
+        ],
+
+
+        science: [
+
+            "آب در شرایط خاص می‌تواند هم به شکل جامد، هم مایع و هم بخار وجود داشته باشد. 💧",
+
+            "اتم‌ها از ذرات بسیار کوچک‌تری مانند پروتون، نوترون و الکترون تشکیل شده‌اند. ⚛️",
+
+            "نور در خلأ با سرعت بسیار زیادی حرکت می‌کند. 💡",
+
+            "بسیاری از مواد در اثر تغییر دما منبسط یا منقبض می‌شوند. 🔬"
+
+        ],
+
+
+        technology: [
+
+            "اولین رایانه‌ها بسیار بزرگ‌تر از رایانه‌های امروزی بودند. 💻",
+
+            "هوش مصنوعی می‌تواند الگوهایی را در حجم زیادی از داده‌ها پیدا کند. 🤖",
+
+            "اینترنت مجموعه‌ای عظیم از شبکه‌های به‌هم‌پیوسته در سراسر جهان است. 🌐",
+
+            "امروزه بسیاری از تلفن‌های همراه قدرت پردازشی بیشتری از رایانه‌های قدیمی دارند. 📱"
+
+        ]
+
+    };
+
+
+    function showFact(category) {
+
+        const list = facts[category];
+
+        const randomIndex =
+            Math.floor(Math.random() * list.length);
+
+        const fact =
+            list[randomIndex];
+
+        document.getElementById("factText").textContent =
+            fact;
+
+        document.getElementById("factBox")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+    }
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body></html>
