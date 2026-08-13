@@ -1,97 +1,441 @@
-<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>کتابخانه شگفتا | داستان و آموزش</title><meta name="description"
-content="کتابخانه شگفتا؛ مجموعه‌ای از قصه‌های کودک، داستان‌های آموزنده، داستان‌های قرآنی، رمان و داستان‌های شهیدان برای مطالعه.">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 
-<link rel="stylesheet" href="style.css"></head><body><!-- ستاره‌ها --><div id="stars-container"></div><!-- ==========================
-عنوان کتابخانه
-========================== --><section class="library-page"><div class="library-big-icon">
-📚
-</div><h1>کتابخانه شگفتا</h1><p class="library-intro">
-اینجا جایی برای خواندن، یادگیری و کشف داستان‌های تازه است 🌱
-</p><!-- ==========================
-دسته‌بندی کتابخانه
-========================== --><div class="library-shelves"><a href="children.html" class="library-shelf"><span>👶</span>
+<head>
 
-<h2>قصه‌های کودک</h2><p>
-قصه‌های شیرین و آموزنده برای کودکان
-</p></a><a href="educational-stories.html" class="library-shelf"><span>📖</span>
+    <meta charset="UTF-8">
 
-<h2>داستان‌های آموزنده</h2><p>
-داستان‌هایی با پیام‌های زیبا و ارزشمند برای بزرگسالان
-</p></a><a href="quran-stories.html" class="library-shelf"><span>🕌</span>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<h2>داستان‌های قرآنی</h2><p>
-داستان‌هایی برگرفته از آموزه‌های قرآنی
-</p></a><a href="novels.html" class="library-shelf"><span>📕</span>
+    <!-- =========================
+         SEO
+    ========================== -->
 
-<h2>رمان‌های جالب</h2><p>
-داستان‌های جذاب برای مطالعه و سرگرمی
-</p></a><a href="short-stories.html" class="library-shelf"><span>🕊️</span>
+    <title>
+        کتابخانه شگفتا | قصه کودک، داستان قرآنی و داستان‌های آموزنده
+    </title>
 
-<h2>داستان‌های شهیدان</h2><p>
-روایت‌هایی از زندگی، ایثار و فداکاری شهیدان
-</p></a></div><!-- ==========================
-آرشیو کامل کتابخانه
-========================== --><section class="library-archive"><h2>📚 آرشیو کامل کتابخانه</h2><p class="shelf-subtitle">
-کتاب‌ها و داستان‌های شگفتا را از اینجا دریافت کنید 🌱
-</p><div class="book-grid"><!-- ==========================
-داستان‌های قرآنی
-========================== --><div class="book-card"><div class="book-cover">
-🕌📖
-</div><h3>
-داستان‌های قرآنی
-</h3><p>
-داستان‌هایی الهام‌بخش از قرآن و زندگی پیامبران 🌱
-</p><a href="quran-stories.html" class="book-btn">
-📖 مشاهده داستان‌ها
-</a></div><!-- ==========================
-قصه‌های کودک
-========================== --><div class="book-card"><div class="book-cover">
-👶📖
-</div><h3>
-قصه‌های کودک
-</h3><p>
-قصه‌های شیرین و آموزنده برای کودکان
-</p><a href="children.html" class="book-btn">
-📖 مشاهده قصه‌ها
-</a><a href="pdf/shegefta-three-stories.pdf"
-class="book-btn"
-download>
-📥 دانلود سه قصه کودک
-</a>
+    <meta name="description"
+          content="کتابخانه شگفتا؛ مجموعه‌ای از قصه‌های کودک، داستان‌های قرآنی، داستان‌های آموزنده، رمان و روایت‌های خواندنی برای مطالعه و یادگیری.">
 
-</div><!-- ==========================
-داستان‌های آموزنده
-========================== --><div class="book-card"><div class="book-cover">
-📖✨
-</div><h3>
-داستان‌های آموزنده
-</h3><p>
-داستان‌هایی آموزنده و الهام‌بخش برای بزرگسالان
-</p><a href="educational-stories.html" class="book-btn">
-📖 مشاهده داستان‌ها
-</a></div><!-- ==========================
-رمان‌های جالب
-========================== --><div class="book-card"><div class="book-cover">
-📕✨
-</div><h3>
-رمان‌های جالب
-</h3><p>
-داستان‌های جذاب برای مطالعه و سرگرمی
-</p><a href="novels.html" class="book-btn">
-📖 مشاهده رمان‌ها
-</a></div><!-- ==========================
-داستان‌های شهیدان
-========================== --><div class="book-card"><div class="book-cover">
-🕊️❤️
-</div><h3>
-داستان‌های شهیدان
-</h3><p>
-روایت‌هایی از زندگی، ایثار و فداکاری شهیدان
-</p><a href="short-stories.html" class="book-btn">
-📖 مشاهده داستان‌ها
-</a></div></div></section><!-- ==========================
-بازگشت
-========================== --><div class="library-back"><a href="index.html" class="back-btn">
-🏠 بازگشت به صفحه اصلی
-</a></div></section><script src="script.js"></script></body></html>
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <meta name="author"
+          content="شگفتا">
+
+
+    <!-- =========================
+         Canonical
+    ========================== -->
+
+    <link rel="canonical"
+          href="https://sofal-saraye-honar.github.io/shegefta-site/library.html">
+
+
+    <!-- =========================
+         Open Graph
+    ========================== -->
+
+    <meta property="og:title"
+          content="کتابخانه شگفتا | قصه و داستان برای مطالعه">
+
+    <meta property="og:description"
+          content="مجموعه‌ای از قصه‌های کودک، داستان‌های قرآنی، داستان‌های آموزنده و رمان در کتابخانه شگفتا.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://sofal-saraye-honar.github.io/shegefta-site/library.html">
+
+    <meta property="og:image"
+          content="https://sofal-saraye-honar.github.io/shegefta-site/images/logo.png">
+
+    <meta property="og:locale"
+          content="fa_IR">
+
+
+    <!-- =========================
+         Twitter
+    ========================== -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="کتابخانه شگفتا">
+
+    <meta name="twitter:description"
+          content="قصه کودک، داستان قرآنی، داستان‌های آموزنده و رمان در کتابخانه شگفتا.">
+
+    <meta name="twitter:image"
+          content="https://sofal-saraye-honar.github.io/shegefta-site/images/logo.png">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     ستاره‌ها
+========================= -->
+
+<div id="stars-container"></div>
+
+
+<!-- =========================
+     کتابخانه
+========================= -->
+
+<section class="library-page">
+
+
+    <!-- عنوان -->
+
+    <div class="library-big-icon">
+        📚
+    </div>
+
+
+    <h1>
+        کتابخانه شگفتا
+    </h1>
+
+
+    <p class="library-intro">
+
+        اینجا جایی برای خواندن، یادگیری
+        و کشف داستان‌های تازه است 🌱
+
+    </p>
+
+
+    <!-- =========================
+         دسته‌بندی‌ها
+    ========================== -->
+
+    <div class="library-shelves">
+
+
+        <!-- قصه کودک -->
+
+        <a href="children.html"
+           class="library-shelf">
+
+            <span>
+                👶
+            </span>
+
+            <h2>
+                قصه‌های کودک
+            </h2>
+
+            <p>
+                قصه‌های شیرین، کوتاه و آموزنده
+                برای کودکان عزیز
+            </p>
+
+        </a>
+
+
+        <!-- داستان آموزنده -->
+
+        <a href="educational-stories.html"
+           class="library-shelf">
+
+            <span>
+                📖
+            </span>
+
+            <h2>
+                داستان‌های آموزنده
+            </h2>
+
+            <p>
+                داستان‌هایی با پیام‌های زیبا
+                و ارزشمند
+            </p>
+
+        </a>
+
+
+        <!-- داستان قرآنی -->
+
+        <a href="quran-stories.html"
+           class="library-shelf">
+
+            <span>
+                🕌
+            </span>
+
+            <h2>
+                داستان‌های قرآنی
+            </h2>
+
+            <p>
+                داستان‌های آموزنده و الهام‌بخش
+                برگرفته از آموزه‌های قرآنی
+            </p>
+
+        </a>
+
+
+        <!-- رمان -->
+
+        <a href="novels.html"
+           class="library-shelf">
+
+            <span>
+                📕
+            </span>
+
+            <h2>
+                رمان‌های جالب
+            </h2>
+
+            <p>
+                داستان‌های جذاب برای مطالعه
+                و سرگرمی
+            </p>
+
+        </a>
+
+
+        <!-- داستان شهیدان -->
+
+        <a href="short-stories.html"
+           class="library-shelf">
+
+            <span>
+                🕊️
+            </span>
+
+            <h2>
+                داستان‌های شهیدان
+            </h2>
+
+            <p>
+                روایت‌هایی از زندگی،
+                ایثار و فداکاری شهیدان
+            </p>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =========================
+         آرشیو
+    ========================== -->
+
+    <section class="library-archive">
+
+
+        <h2>
+            📚 آرشیو کتابخانه شگفتا
+        </h2>
+
+
+        <p class="shelf-subtitle">
+
+            مجموعه داستان‌ها و کتاب‌های شگفتا
+            برای مطالعه و یادگیری 🌱
+
+        </p>
+
+
+        <div class="book-grid">
+
+
+            <!-- داستان قرآنی -->
+
+            <div class="book-card">
+
+                <div class="book-cover">
+                    🕌📖
+                </div>
+
+                <h3>
+                    داستان‌های قرآنی
+                </h3>
+
+                <p>
+                    داستان‌هایی آموزنده و الهام‌بخش
+                    از قرآن و زندگی پیامبران
+                </p>
+
+                <a href="quran-stories.html"
+                   class="book-btn">
+
+                    📖 مشاهده داستان‌ها
+
+                </a>
+
+            </div>
+
+
+            <!-- قصه کودک -->
+
+            <div class="book-card">
+
+                <div class="book-cover">
+                    👶📖
+                </div>
+
+                <h3>
+                    قصه‌های کودک
+                </h3>
+
+                <p>
+                    قصه‌های شیرین، کوتاه و آموزنده
+                    برای کودکان عزیز
+                </p>
+
+                <a href="children.html"
+                   class="book-btn">
+
+                    📖 مشاهده قصه‌ها
+
+                </a>
+
+
+                <a href="pdf/shegefta-three-stories.pdf"
+                   class="book-btn"
+                   download>
+
+                    📥 دانلود قصه‌ها
+
+                </a>
+
+            </div>
+
+
+            <!-- داستان آموزنده -->
+
+            <div class="book-card">
+
+                <div class="book-cover">
+                    📖✨
+                </div>
+
+                <h3>
+                    داستان‌های آموزنده
+                </h3>
+
+                <p>
+                    داستان‌هایی الهام‌بخش
+                    با پیام‌های ارزشمند
+                </p>
+
+                <a href="educational-stories.html"
+                   class="book-btn">
+
+                    📖 مشاهده داستان‌ها
+
+                </a>
+
+            </div>
+
+
+            <!-- رمان -->
+
+            <div class="book-card">
+
+                <div class="book-cover">
+                    📕✨
+                </div>
+
+                <h3>
+                    رمان‌های جالب
+                </h3>
+
+                <p>
+                    داستان‌های جذاب برای مطالعه
+                    و سرگرمی
+                </p>
+
+                <a href="novels.html"
+                   class="book-btn">
+
+                    📖 مشاهده رمان‌ها
+
+                </a>
+
+            </div>
+
+
+            <!-- داستان شهیدان -->
+
+            <div class="book-card">
+
+                <div class="book-cover">
+                    🕊️❤️
+                </div>
+
+                <h3>
+                    داستان‌های شهیدان
+                </h3>
+
+                <p>
+                    روایت‌هایی از زندگی،
+                    ایثار و فداکاری شهیدان
+                </p>
+
+                <a href="short-stories.html"
+                   class="book-btn">
+
+                    📖 مشاهده داستان‌ها
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         بازگشت
+    ========================== -->
+
+    <div class="library-back">
+
+        <a href="index.html"
+           class="back-btn">
+
+            🏠 بازگشت به صفحه اصلی
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     JavaScript
+========================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
