@@ -2,17 +2,14 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- صفحه اصلی -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/</loc>
     </url>
 
-    <!-- کتابخانه -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/library.html</loc>
     </url>
 
-    <!-- دعا و زیارت -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/dua.html</loc>
     </url>
@@ -29,62 +26,50 @@
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/tasbihat.html</loc>
     </url>
 
-    <!-- فال حافظ -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/hafez.html</loc>
     </url>
 
-    <!-- جملات -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/quotes.html</loc>
     </url>
 
-    <!-- آموزش -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/learn.html</loc>
     </url>
 
-    <!-- دانستنی -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/knowledge.html</loc>
     </url>
 
-    <!-- دانلود -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/download.html</loc>
     </url>
 
-    <!-- کتابخانه کودکان -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/children.html</loc>
     </url>
 
-    <!-- داستان های آموزنده -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/educational-stories.html</loc>
     </url>
 
-    <!-- داستان های قرآنی -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/quran-stories.html</loc>
     </url>
 
-    <!-- داستان شهیدان -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/short-stories.html</loc>
     </url>
 
-    <!-- رمان -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/novels.html</loc>
     </url>
 
-    <!-- درباره ما -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/about.html</loc>
     </url>
 
-    <!-- ارتباط با ما -->
     <url>
         <loc>https://sofal-saraye-honar.github.io/shegefta-site/contact.html</loc>
     </url>
