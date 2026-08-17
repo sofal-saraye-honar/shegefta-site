@@ -3855,3 +3855,39 @@ align-items: center;
     }
 
 }
+
+ /* =========================
+    کارت راهنمای نجوم
+========================= */
+
+.card .card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card[href="astronomy-guide.html"] {
+    position: relative;
+    overflow: hidden;
+}
+
+.card[href="astronomy-guide.html"]::before {
+    content: "✦";
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 22px;
+    opacity: 0.7;
+}
+
+.card[href="astronomy-guide.html"]::after {
+    content: "✦";
+    position: absolute;
+    bottom: 12px;
+    right: 18px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.card[href="astronomy-guide.html"]:hover {
+    transform: translateY(-6px);
+}
